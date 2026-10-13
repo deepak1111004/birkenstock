@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // during page hydration or tab visibility changes. Do not fight a user's
   // explicit pause once they have interacted with the control.
   const heroVideo = document.querySelector('video[aria-label="Birkenstock promotional video"]');
+  const heroSource = heroVideo?.querySelector('source[data-chunked-src]');
   if (heroVideo) {
     let heroWasInteractedWith = false;
     ['click', 'pointerdown', 'touchstart', 'keydown'].forEach(eventName => {
@@ -58,6 +59,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     document.addEventListener('visibilitychange', resumeHeroVideo);
+
+    if (heroSource) {
+      (async () => {
+        try {
+          const parts = [];
+          for (let index = 1; index <= 9; index += 1) {
+            const response = await fetch(`${heroSource.dataset.chunkedSrc}.part${String(index).padStart(2, '0')}`);
+            if (!response.ok) throw new Error(`Promo video chunk ${index} unavailable`);
+            parts.push(await response.text());
+          }
+          const binary = atob(parts.join(''));
+          const bytes = new Uint8Array(binary.length);
+          for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+          heroSource.src = URL.createObjectURL(new Blob([bytes], { type: 'video/mp4' }));
+          heroVideo.load();
+          heroVideo.addEventListener('loadeddata', resumeHeroVideo, { once: true });
+        } catch (error) {
+          console.warn('Promo video could not be assembled from repository chunks.', error);
+        }
+      })();
+    }
   }
 
   /* -------------------------------------------------------------
