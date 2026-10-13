@@ -1,0 +1,17 @@
+{
+  "name": "birkenstock-marketing-presentation",
+  "version": "1.0.0",
+  "description": "Interactive marketing strategy presentation decoding Birkenstock through the 4 Ps and STP.",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "keywords": [
+    "birkenstock",
+    "marketing",
+    "4ps",
+    "stp",
+    "presentation"
+  ],
+  "author": "",
+  "license": "ISC"
+}
