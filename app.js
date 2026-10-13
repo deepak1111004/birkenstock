@@ -5,6 +5,37 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // GitHub's standard file API is text-oriented, so the larger closing film
+  // is stored as sequential base64 chunks and rebuilt only when the section is
+  // opened. This keeps the repository portable while preserving the original
+  // MP4 in the browser.
+  const closingVideo = document.querySelector('#stp-closing-video video');
+  const closingSource = closingVideo?.querySelector('source[data-chunked-src]');
+  if (closingVideo && closingSource) {
+    closingVideo.addEventListener('play', async () => {
+      if (closingSource.src || closingVideo.dataset.ready) return;
+      closingVideo.dataset.ready = 'loading';
+      try {
+        const parts = [];
+        for (let index = 1; index <= 29; index += 1) {
+          const response = await fetch(`${closingSource.dataset.chunkedSrc}.part${String(index).padStart(2, '0')}`);
+          if (!response.ok) throw new Error(`Video chunk ${index} unavailable`);
+          parts.push(await response.text());
+        }
+        const binary = atob(parts.join(''));
+        const bytes = new Uint8Array(binary.length);
+        for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+        closingSource.src = URL.createObjectURL(new Blob([bytes], { type: 'video/mp4' }));
+        closingVideo.load();
+        closingVideo.dataset.ready = 'true';
+        await closingVideo.play();
+      } catch (error) {
+        closingVideo.dataset.ready = '';
+        console.warn('Closing film could not be assembled from repository chunks.', error);
+      }
+    }, { once: true });
+  }
+
   /* -------------------------------------------------------------
      1. SCROLL PROGRESS BAR
      ------------------------------------------------------------- */
