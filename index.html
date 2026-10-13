@@ -1,0 +1,2748 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birkenstock — The Art of Walking Different | Marketing Strategy Presentation</title>
+  <meta name="description" content="An interactive marketing strategy presentation decoding Birkenstock through the 4 Ps of Marketing and STP.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN for modern utilities -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cork: {
+              50: '#F9F5F0',
+              100: '#F2E8DC',
+              200: '#E4CFB8',
+              300: '#CFA884',
+              400: '#BA8454',
+              500: '#9C663D',
+              600: '#82522C',
+              700: '#673E1F',
+              800: '#4D2C14',
+              900: '#321C0B',
+            },
+            sand: {
+              50: '#FBF9F6',
+              100: '#F5F0EB',
+              200: '#ECE3D8',
+              300: '#DFD1C1',
+              400: '#CAB59F',
+            },
+            espresso: {
+              900: '#14110F',
+              800: '#1E1A17',
+              700: '#2C2622',
+              600: '#403833',
+            },
+            brass: {
+              400: '#D4AF37',
+              500: '#C5A059',
+              600: '#A98338',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+</head>
+<body class="bg-sand-50 text-espresso-800 font-sans antialiased selection:bg-cork-200 selection:text-espresso-900">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-1 z-50 bg-sand-200/50">
+    <div id="scroll-progress" class="h-full bg-cork-600 transition-all duration-150 w-0"></div>
+  </div>
+
+  <!-- Sticky Luxury Navigation Bar -->
+  <header id="main-nav" class="fixed top-0 left-0 w-full z-40 bg-sand-50/90 backdrop-blur-md border-b border-sand-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Brand Identity -->
+      <a href="#home" class="group flex flex-col items-start focus:outline-none" aria-label="Birkenstock Home">
+        <span class="font-serif text-2xl tracking-[0.25em] font-bold text-espresso-900 group-hover:text-cork-600 transition-colors">BIRKENSTOCK</span>
+        <span class="text-[9px] tracking-[0.3em] uppercase text-cork-600 font-semibold">EST. 1774 • MARKETING ANALYSIS</span>
+      </a>
+
+      <!-- Desktop Nav Order -->
+      <nav class="hidden xl:flex items-center space-x-1" aria-label="Main Navigation">
+        <a href="#home" class="nav-link px-2.5 py-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-200 rounded text-espresso-700 hover:text-cork-700 hover:bg-sand-100" data-section="home">Home</a>
+        <span class="text-sand-300 text-xs">/</span>
+        <a href="#heritage" class="nav-link px-2.5 py-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-200 rounded text-espresso-700 hover:text-cork-700 hover:bg-sand-100" data-section="heritage">Heritage</a>
+        <span class="text-sand-300 text-xs">/</span>
+        <a href="#four-ps" class="nav-link px-2.5 py-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-200 rounded text-espresso-700 hover:text-cork-700 hover:bg-sand-100" data-section="four-ps">4 Ps</a>
+        <span class="text-sand-300 text-xs">/</span>
+        <a href="#product" class="nav-link px-2.5 py-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-200 rounded text-espresso-700 hover:text-cork-700 hover:bg-sand-100" data-section="product">Product</a>
+        <span class="text-sand-300 text-xs">/</span>
+        <a href="#price" class="nav-link px-2.5 py-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-200 rounded text-espresso-700 hover:text-cork-700 hover:bg-sand-100" data-section="price">Price</a>
+        <span class="text-sand-300 text-xs">/</span>
+        <a href="#place" class="nav-link px-2.5 py-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-200 rounded text-espresso-700 hover:text-cork-700 hover:bg-sand-100" data-section="place">Place</a>
+        <span class="text-sand-300 text-xs">/</span>
+        <a href="#promotion" class="nav-link px-2.5 py-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-200 rounded text-espresso-700 hover:text-cork-700 hover:bg-sand-100" data-section="promotion">Promotion</a>
+        <span class="text-sand-300 text-xs">/</span>
+        <a href="#stp" class="nav-link px-2.5 py-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-200 rounded text-espresso-700 hover:text-cork-700 hover:bg-sand-100" data-section="stp">STP</a>
+      </nav>
+
+      <!-- Right Header Actions: Slide Map & Presentation Mode Button & Mobile Toggle -->
+      <div class="flex items-center space-x-2.5">
+        <a href="#slide-map" class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full border border-sand-300 text-espresso-700 hover:border-cork-500 hover:text-cork-800 transition-colors text-[11px] tracking-wider uppercase font-semibold">
+          <svg class="w-3.5 h-3.5 text-cork-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+          </svg>
+          <span>Slide Map</span>
+        </a>
+
+        <button id="enter-pres-btn" class="inline-flex items-center space-x-2 px-4 py-2 rounded-full border border-cork-600 text-cork-700 bg-sand-100/60 hover:bg-cork-600 hover:text-white transition-all duration-200 text-xs tracking-wider uppercase font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-cork-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+          </svg>
+          <span class="hidden sm:inline">Presentation Mode (10 Slides)</span>
+          <span class="sm:hidden">10 Slides</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="xl:hidden p-2.5 rounded-lg text-espresso-800 hover:bg-sand-200/70 focus:outline-none focus:ring-2 focus:ring-cork-600" aria-label="Toggle Navigation Menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="xl:hidden hidden bg-sand-50/98 border-b border-sand-300 px-6 py-6 transition-all duration-300 shadow-xl max-h-[85vh] overflow-y-auto">
+      <div class="flex flex-col space-y-2">
+        <a href="#home" class="mobile-nav-link text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-lg text-espresso-800 hover:bg-sand-200" data-section="home">Home</a>
+        <a href="#heritage" class="mobile-nav-link text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-lg text-espresso-800 hover:bg-sand-200" data-section="heritage">Brand Story & Heritage (Slide 2)</a>
+        <a href="#four-ps" class="mobile-nav-link text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-lg text-espresso-800 hover:bg-sand-200" data-section="four-ps">The 4 Ps Architecture (Slide 3)</a>
+        <a href="#product" class="mobile-nav-link text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-lg text-espresso-800 hover:bg-sand-200" data-section="product">Product Strategy (Slides 4 & 5)</a>
+        <a href="#price" class="mobile-nav-link text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-lg text-espresso-800 hover:bg-sand-200" data-section="price">Price Strategy in ₹ (The 2nd P)</a>
+        <a href="#place" class="mobile-nav-link text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-lg text-espresso-800 hover:bg-sand-200" data-section="place">Place / Distribution & World Map</a>
+        <a href="#promotion" class="mobile-nav-link text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-lg text-espresso-800 hover:bg-sand-200" data-section="promotion">Promotion Strategy & Campaign</a>
+        <a href="#stp" class="mobile-nav-link text-xs uppercase tracking-wider font-semibold py-2 px-3 rounded-lg text-espresso-800 hover:bg-sand-200" data-section="stp">STP Strategic Framework (Slides 6-9)</a>
+        
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN PRESENTATION CONTAINER -->
+  <main class="pt-20">
+
+    <!-- ========================================== -->
+    <!-- 1. WEBSITE HOMEPAGE (#home)                -->
+    <!-- ========================================== -->
+    <section id="home" class="presentation-section relative min-h-[calc(100vh-5rem)] flex flex-col justify-center py-16 px-4 sm:px-6 lg:px-8 border-b border-sand-200">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Hero Grid: Text & Large Footwear Hero Image -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sand-200/70 border border-sand-300 text-cork-800 text-xs tracking-wider uppercase font-semibold">
+              <span class="w-2 h-2 rounded-full bg-cork-600 animate-pulse"></span>
+              <span>Marketing Management • Brand Builders</span>
+            </div>
+            
+            <h1 class="font-serif text-5xl sm:text-6xl xl:text-7xl font-bold tracking-tight text-espresso-900 leading-[1.08]">
+              THE ART OF WALKING DIFFERENT.
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-espresso-600 font-light leading-relaxed max-w-xl">
+              Discover how Birkenstock connects product design, premium value, distribution, promotion and customer positioning.
+            </p>
+
+            <!-- Working Hero Action Buttons (Section 4 Requirements) -->
+            <div class="pt-2 flex flex-wrap gap-3 items-center">
+              <a href="#four-ps" class="inline-flex items-center space-x-2 px-5 py-3 rounded-full bg-espresso-900 text-sand-50 hover:bg-cork-700 transition-all duration-200 text-xs tracking-wider uppercase font-semibold focus:outline-none">
+                <span>Explore the 4 Ps</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </a>
+
+              <a href="#product-comparison" class="inline-flex items-center space-x-2 px-5 py-3 rounded-full bg-cork-600 text-white hover:bg-cork-500 transition-all duration-200 text-xs tracking-wider uppercase font-semibold focus:outline-none">
+                <span>Compare the Products</span>
+              </a>
+
+              <a href="#stp" class="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-cork-600 text-cork-700 bg-sand-100/80 hover:bg-cork-100 transition-all duration-200 text-xs tracking-wider uppercase font-semibold focus:outline-none">
+                <span>Discover STP</span>
+              </a>
+
+              <a href="#place-world" class="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-sand-300 text-espresso-800 hover:bg-sand-100 transition-all duration-200 text-xs tracking-wider uppercase font-semibold focus:outline-none">
+                <svg class="w-3.5 h-3.5 text-cork-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Explore the World</span>
+              </a>
+
+              <a href="#promotion" class="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-sand-300 text-espresso-800 hover:bg-sand-100 transition-all duration-200 text-xs tracking-wider uppercase font-semibold focus:outline-none">
+                <span>View Promotion</span>
+              </a>
+
+              <button class="launch-presentation-trigger inline-flex items-center space-x-2 px-5 py-3 rounded-full bg-sand-200/80 hover:bg-sand-300 text-espresso-900 transition-all duration-200 text-xs tracking-wider uppercase font-semibold focus:outline-none">
+                <svg class="w-3.5 h-3.5 text-cork-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <span>Open Slide Presentation</span>
+              </button>
+
+              <button data-slide-index="0" class="inline-flex items-center space-x-2 px-5 py-3 rounded-full bg-espresso-800 text-cork-200 hover:bg-espresso-700 transition-all duration-200 text-xs tracking-wider uppercase font-semibold focus:outline-none shadow-sm">
+                <svg class="w-3.5 h-3.5 text-cork-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/></svg>
+                <span>Start Presentation</span>
+              </button>
+            </div>
+
+            <!-- Framework Hierarchy Notice -->
+            <div class="pt-4 flex items-center space-x-3 text-xs text-espresso-500 border-t border-sand-200">
+              <span class="font-semibold text-cork-700 uppercase tracking-widest">Original Slide Trajectory:</span>
+              <span>1. Title → 2. Heritage → 3. The 4 Ps → 4-5. Product Portfolio & Strategy → 6-9. STP Architecture → 10. Go-To-Market → 11. Conclusion</span>
+            </div>
+          </div>
+
+          <!-- Hero Image: Large Editorial Footwear Display -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-sand-100 border border-sand-300/80 group">
+              <video class="w-full h-[440px] sm:h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero-arizona.jpg" aria-label="Birkenstock promotional video">
+                <source src="assets/promo-background.mp4" type="video/mp4">
+                <img src="assets/images/hero-arizona.jpg" alt="Birkenstock Arizona Sandals resting on natural cork and sandstone">
+              </video>
+              <div class="absolute inset-0 bg-gradient-to-t from-espresso-900/65 via-transparent to-transparent pointer-events-none"></div>
+              
+              <!-- Luxury Editorial Floating Badge -->
+              <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-espresso-900/85 backdrop-blur-md text-sand-50 flex items-center justify-between border border-white/10 shadow-lg">
+                <div>
+                  <div class="text-[10px] tracking-[0.25em] uppercase text-cork-300 font-semibold">Anatomical Footbed Pioneer</div>
+                  <div class="text-sm font-medium tracking-wide">Contoured Cork & Natural Latex Heritage</div>
+                </div>
+                <div class="text-right">
+                  <span class="inline-block px-2.5 py-1 rounded bg-cork-600 text-[10px] uppercase tracking-wider font-bold">Est. 1774</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- SLIDE-TO-WEBSITE MAPPING AUDIT PANEL       -->
+        <!-- ========================================== -->
+        <div id="slide-map" class="mb-16 p-6 sm:p-8 rounded-3xl bg-white border border-sand-300/90 shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-sand-200 mb-6 gap-4">
+            <div>
+              <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest font-bold text-cork-700 mb-1">
+                <span class="w-2 h-2 rounded-full bg-cork-600"></span>
+                <span>Slide-to-Website Verification Map</span>
+              </div>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-900">Original PowerPoint Verification Matrix</h2>
+              <p class="text-xs sm:text-sm text-espresso-600 mt-1">Every single slide from Brand Builders' original deck is mapped to its website section and interactive slide modal.</p>
+            </div>
+            <button class="launch-presentation-trigger inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-espresso-900 text-white hover:bg-cork-700 transition-colors text-xs uppercase tracking-wider font-semibold self-start sm:self-auto">
+              <span>Present All 11 Slides</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <div class="slide-map-grid">
+            
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 01</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">Cover</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">STP in Marketing Management</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Single-strap, double-strap, and clog introduction.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#home" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="0" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 1</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 02</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">Heritage</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">The Birkenstock Story</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">1774–2023 milestones + 3 retention pillars.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#heritage" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="1" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 2</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 03</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">The 4 Ps</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Comfort as Premium Product</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Product, Price (₹6,000–₹15,000+), Place, Promotion.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#four-ps" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="2" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 3</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 04</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">Portfolio</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Three Styles Across the Day</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Single strap, double strap, and clog listings in ₹.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#product" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="3" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 4</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 05</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">Strategy</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Giving Each Style Its Own Job</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Distinct distribution pushes for each silhouette.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#product-comparison" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="4" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 5</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 06</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">STP</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Segmentation: Four Lenses</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Geographic, demographic, psychographic, behavioral.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#stp" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="5" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 6</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 07</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">STP</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Target Customer Profile</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Urban professionals aged 22–40.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#stp" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="6" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 7</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 08</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">STP</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Targeting Framework</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Reach → Fit → Primary Target concentric model.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#stp" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="7" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 8</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 09</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">STP</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Positioning Strategy</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Comfort, Craft, Design, Meaning + price spectrum.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#stp" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="8" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 9</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 10</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">GTM</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Go-To-Market Growth Plan</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">STP into growth plan + 4 channel maps.</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#growth" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="9" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 10</button>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-sand-50 border border-sand-200 flex flex-col justify-between hover:border-cork-500 transition-all">
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-[10px] font-mono font-bold text-cork-700 bg-sand-200 px-2 py-0.5 rounded">SLIDE 11</span>
+                  <span class="text-[10px] uppercase text-espresso-400 font-semibold">Q&A</span>
+                </div>
+                <h4 class="font-serif font-bold text-espresso-900 text-sm">Conclusion & Discussion</h4>
+                <p class="text-[11px] text-espresso-600 mt-1">Thank you & strategic dialogue (Brand Builders).</p>
+              </div>
+              <div class="flex items-center space-x-2 mt-3 pt-2 border-t border-sand-200">
+                <a href="#conclusion" class="text-[10px] uppercase font-bold text-cork-700 hover:text-espresso-900">Jump to Section</a>
+                <span class="text-sand-300">•</span>
+                <button data-slide-index="10" class="text-[10px] uppercase font-bold text-espresso-700 hover:text-cork-700">Open Slide 11</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Strategy Gateway Cards on Homepage for 4 Ps and STP -->
+        <div class="pt-4">
+          <div class="flex items-center justify-between mb-8 pb-3 border-b border-sand-200">
+            <div>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-900">Explore Strategy Pillars</h2>
+              <p class="text-sm text-espresso-600 mt-1">Direct interactive gateways into the 4 Ps tactical mix and strategic STP analysis.</p>
+            </div>
+            <span class="hidden sm:inline-block text-xs uppercase tracking-widest text-cork-700 font-semibold bg-sand-200/80 px-3 py-1 rounded-full">5 Interactive Pillars</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            
+            <!-- Card 1: Product -->
+            <div class="gateway-card group bg-white rounded-2xl border border-sand-200 p-5 flex flex-col justify-between hover:shadow-xl hover:border-cork-400 transition-all duration-300 hover:-translate-y-1">
+              <div>
+                <div class="relative h-40 rounded-xl overflow-hidden mb-4 bg-sand-100">
+                  <img src="assets/images/boston-clog.jpg" alt="Birkenstock Product Pillar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-espresso-900/80 text-[10px] uppercase font-bold text-sand-50 tracking-wider">1st P</span>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-600 transition-colors">Product Strategy</h3>
+                <p class="text-xs text-espresso-600 mt-1.5 leading-relaxed line-clamp-3">
+                  Core benefit, actual anatomy, and augmented brand equity. Arizona, Boston, and Gizeh teardown.
+                </p>
+              </div>
+              <div class="pt-4 mt-2 border-t border-sand-100">
+                <a href="#product" class="w-full inline-flex items-center justify-between text-xs uppercase font-bold tracking-wider text-cork-700 group-hover:text-espresso-900 transition-colors">
+                  <span>Explore Product</span>
+                  <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Price -->
+            <div class="gateway-card group bg-white rounded-2xl border border-sand-200 p-5 flex flex-col justify-between hover:shadow-xl hover:border-cork-400 transition-all duration-300 hover:-translate-y-1">
+              <div>
+                <div class="relative h-40 rounded-xl overflow-hidden mb-4 bg-sand-100">
+                  <div class="w-full h-full bg-gradient-to-br from-cork-600 to-espresso-900 flex flex-col items-center justify-center p-4 text-center text-sand-50">
+                    <span class="text-2xl font-serif font-bold text-brass-400">1774</span>
+                    <span class="text-[10px] uppercase tracking-widest text-cork-200 mt-1">Value-Based Pricing</span>
+                  </div>
+                  <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-espresso-900/80 text-[10px] uppercase font-bold text-sand-50 tracking-wider">2nd P</span>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-600 transition-colors">Price Strategy</h3>
+                <p class="text-xs text-espresso-600 mt-1.5 leading-relaxed line-clamp-3">
+                  Premium pricing architecture, cost-per-wear calculus, and quality positioning vs fast fashion.
+                </p>
+              </div>
+              <div class="pt-4 mt-2 border-t border-sand-100">
+                <a href="#price" class="w-full inline-flex items-center justify-between text-xs uppercase font-bold tracking-wider text-cork-700 group-hover:text-espresso-900 transition-colors">
+                  <span>Explore Price</span>
+                  <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3: Place -->
+            <div class="gateway-card group bg-white rounded-2xl border border-sand-200 p-5 flex flex-col justify-between hover:shadow-xl hover:border-cork-400 transition-all duration-300 hover:-translate-y-1">
+              <div>
+                <div class="relative h-40 rounded-xl overflow-hidden mb-4 bg-sand-100">
+                  <div class="w-full h-full bg-gradient-to-br from-sand-300 to-cork-700 flex flex-col items-center justify-center p-4 text-center text-espresso-900">
+                    <svg class="w-10 h-10 text-white drop-shadow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                    <span class="text-[10px] uppercase tracking-widest text-white mt-2 font-semibold">Selective Channels</span>
+                  </div>
+                  <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-espresso-900/80 text-[10px] uppercase font-bold text-sand-50 tracking-wider">3rd P</span>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-600 transition-colors">Place Strategy</h3>
+                <p class="text-xs text-espresso-600 mt-1.5 leading-relaxed line-clamp-3">
+                  Selective distribution, DTC online stores, flagship sensory retail, and brand equity protection.
+                </p>
+              </div>
+              <div class="pt-4 mt-2 border-t border-sand-100">
+                <a href="#place" class="w-full inline-flex items-center justify-between text-xs uppercase font-bold tracking-wider text-cork-700 group-hover:text-espresso-900 transition-colors">
+                  <span>Explore Place</span>
+                  <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 4: Promotion -->
+            <div class="gateway-card group bg-white rounded-2xl border border-sand-200 p-5 flex flex-col justify-between hover:shadow-xl hover:border-cork-400 transition-all duration-300 hover:-translate-y-1">
+              <div>
+                <div class="relative h-40 rounded-xl overflow-hidden mb-4 bg-sand-100">
+                  <div class="w-full h-full bg-gradient-to-br from-cork-800 to-espresso-900 flex flex-col items-center justify-center p-4 text-center text-sand-50">
+                    <span class="font-serif italic text-lg text-sand-100">"Walk Your Own Path"</span>
+                    <span class="text-[9px] uppercase tracking-widest text-cork-300 mt-1">Student Campaign</span>
+                  </div>
+                  <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-espresso-900/80 text-[10px] uppercase font-bold text-sand-50 tracking-wider">4th P</span>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-600 transition-colors">Promotion Strategy</h3>
+                <p class="text-xs text-espresso-600 mt-1.5 leading-relaxed line-clamp-3">
+                  Anti-advertising roots, UGC organic culture, and our 3-frame student storyboard campaign.
+                </p>
+              </div>
+              <div class="pt-4 mt-2 border-t border-sand-100">
+                <a href="#promotion" class="w-full inline-flex items-center justify-between text-xs uppercase font-bold tracking-wider text-cork-700 group-hover:text-espresso-900 transition-colors">
+                  <span>Explore Promotion</span>
+                  <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 5: STP -->
+            <div class="gateway-card group bg-white rounded-2xl border border-sand-200 p-5 flex flex-col justify-between hover:shadow-xl hover:border-cork-400 transition-all duration-300 hover:-translate-y-1 bg-gradient-to-b from-white to-sand-100/40">
+              <div>
+                <div class="relative h-40 rounded-xl overflow-hidden mb-4 bg-sand-100">
+                  <img src="assets/images/gizeh-sandal.jpg" alt="Birkenstock STP Strategy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-cork-700 text-[10px] uppercase font-bold text-sand-50 tracking-wider">STP Framework</span>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-600 transition-colors">STP Analysis</h3>
+                <p class="text-xs text-espresso-600 mt-1.5 leading-relaxed line-clamp-3">
+                  Market segmentation, target customer personas, and interactive perceptual positioning map.
+                </p>
+              </div>
+              <div class="pt-4 mt-2 border-t border-sand-100">
+                <a href="#stp" class="w-full inline-flex items-center justify-between text-xs uppercase font-bold tracking-wider text-cork-700 group-hover:text-espresso-900 transition-colors">
+                  <span>Explore STP</span>
+                  <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 1B. BRAND STORY & HERITAGE (#heritage)    -->
+    <!-- (Source: PowerPoint Slide 2)               -->
+    <!-- ========================================== -->
+    <section id="heritage" class="presentation-section relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 border-b border-sand-200 bg-sand-100/50">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-sand-200">
+          <div>
+            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-2">
+              <span class="px-2 py-0.5 rounded bg-cork-200 text-cork-800">Slide 02</span>
+              <span>• Brand Story & Heritage</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-espresso-900">From a Village Shoemaker to a Global Comfort Brand</h2>
+            <p class="text-base text-espresso-600 mt-2 max-w-3xl">
+              A 250-year orthopedic continuum connecting Johann Adam Birkenstock's 1774 cobbler registry in Langen to a 2023 NYSE listing.
+            </p>
+          </div>
+          
+          <div class="mt-4 md:mt-0 flex items-center space-x-3">
+            <button data-slide-index="1" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full bg-espresso-900 text-sand-50 hover:bg-cork-700 text-xs font-semibold uppercase tracking-wider transition-colors">
+              <span>Present Slide 2</span>
+              <span>→</span>
+            </button>
+            <a href="#home" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full border border-sand-300 text-xs font-semibold uppercase tracking-wider text-espresso-700 hover:bg-sand-200 transition-colors">
+              <span>Home</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5-Stage Interactive Historical Timeline -->
+        <div class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="font-serif text-2xl font-bold text-espresso-900">Historical Evolution Timeline</h3>
+            <span class="text-xs font-mono uppercase tracking-widest text-cork-700 font-semibold bg-sand-200 px-3 py-1 rounded-full">1774 — 2023</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            
+            <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm hover:shadow-md transition-shadow relative">
+              <span class="text-2xl font-serif font-bold text-cork-700 block mb-2 font-mono">1774</span>
+              <h4 class="text-sm font-bold text-espresso-900 mb-1">Johann Adam Birkenstock</h4>
+              <p class="text-xs text-espresso-600 leading-relaxed">Recorded as a cobbler in Langen, Germany, establishing the family's orthopedic shoemaking trade.</p>
+              <div class="mt-4 pt-3 border-t border-sand-100 text-[10px] text-cork-700 font-bold uppercase tracking-wider">Langen Roots</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm hover:shadow-md transition-shadow relative">
+              <span class="text-2xl font-serif font-bold text-cork-700 block mb-2 font-mono">1896</span>
+              <h4 class="text-sm font-bold text-espresso-900 mb-1">Flexible Arch Insoles</h4>
+              <p class="text-xs text-espresso-600 leading-relaxed">Konrad Birkenstock opens shoe stores in Frankfurt and invents pliable, flexible arch-support insoles.</p>
+              <div class="mt-4 pt-3 border-t border-sand-100 text-[10px] text-cork-700 font-bold uppercase tracking-wider">Frankfurt Stores</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm hover:shadow-md transition-shadow relative">
+              <span class="text-2xl font-serif font-bold text-cork-700 block mb-2 font-mono">1963</span>
+              <h4 class="text-sm font-bold text-espresso-900 mb-1">Contoured Everyday Sandal</h4>
+              <p class="text-xs text-espresso-600 leading-relaxed">Karl Birkenstock builds the contoured footbed into an everyday sandal (Madrid), launching modern podiatric footwear.</p>
+              <div class="mt-4 pt-3 border-t border-sand-100 text-[10px] text-cork-700 font-bold uppercase tracking-wider">Footbed Innovation</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm hover:shadow-md transition-shadow relative">
+              <span class="text-2xl font-serif font-bold text-cork-700 block mb-2 font-mono">1966</span>
+              <h4 class="text-sm font-bold text-espresso-900 mb-1">US Health-Food Discovery</h4>
+              <p class="text-xs text-espresso-600 leading-relaxed">Margot Fraser discovers the sandals in Germany, brings them to US health-food stores, and word spreads organically.</p>
+              <div class="mt-4 pt-3 border-t border-sand-100 text-[10px] text-cork-700 font-bold uppercase tracking-wider">US Organic Entry</div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border-2 border-cork-500 shadow-sm hover:shadow-md transition-shadow relative bg-gradient-to-b from-white to-sand-100/60">
+              <span class="text-2xl font-serif font-bold text-cork-700 block mb-2 font-mono">2023</span>
+              <h4 class="text-sm font-bold text-espresso-900 mb-1">NYSE Global Listing</h4>
+              <p class="text-xs text-espresso-600 leading-relaxed">Birkenstock lists on the New York Stock Exchange as an undisputed global comfort, cultural, and fashion powerhouse.</p>
+              <div class="mt-4 pt-3 border-t border-sand-100 text-[10px] text-cork-800 font-bold uppercase tracking-wider">Global Milestone</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Three Pillars: Why Customers Stay for the Long Run -->
+        <div class="p-8 rounded-3xl bg-white border border-sand-200 shadow-sm">
+          <div class="max-w-2xl mb-8">
+            <span class="text-xs uppercase font-bold tracking-widest text-cork-700 block mb-1">Customer Retention Architecture</span>
+            <h3 class="font-serif text-3xl font-bold text-espresso-900">Why Customers Stay for the Long Run</h3>
+            <p class="text-sm text-espresso-600 mt-2">The trifecta of anatomical mouldability, heirloom durability, and timeless silhouette reinvention.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="p-6 rounded-2xl bg-sand-50 border border-sand-200">
+              <div class="w-10 h-10 rounded-full bg-cork-100 text-cork-800 flex items-center justify-center font-bold mb-4">
+                1
+              </div>
+              <h4 class="font-serif text-xl font-bold text-espresso-900 mb-2">The Footbed Moulds to You</h4>
+              <p class="text-xs text-espresso-700 leading-relaxed">
+                The cork-latex footbed gradually shapes itself to the wearer's individual foot anatomy and arch contours over time, meaning comfort grows progressively with wear.
+              </p>
+              <div class="mt-4 pt-3 border-t border-sand-200 text-[11px] text-cork-700 font-semibold">
+                → Biomechanical Personalization
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-sand-50 border border-sand-200">
+              <div class="w-10 h-10 rounded-full bg-cork-100 text-cork-800 flex items-center justify-center font-bold mb-4">
+                2
+              </div>
+              <h4 class="font-serif text-xl font-bold text-espresso-900 mb-2">Built to Last</h4>
+              <p class="text-xs text-espresso-700 leading-relaxed">
+                Constructed with thick, durable natural leathers and EVA soles that can be officially repaired, resoled, or restored, so an individual pair stays in active rotation for years.
+              </p>
+              <div class="mt-4 pt-3 border-t border-sand-200 text-[11px] text-cork-700 font-semibold">
+                → Sustainable Longevity Moat
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-sand-50 border border-sand-200">
+              <div class="w-10 h-10 rounded-full bg-cork-100 text-cork-800 flex items-center justify-center font-bold mb-4">
+                3
+              </div>
+              <h4 class="font-serif text-xl font-bold text-espresso-900 mb-2">Same Idea, Fresh Looks</h4>
+              <p class="text-xs text-espresso-700 leading-relaxed">
+                The patented anatomical footbed geometry never changes, while seasonal colours, premium materials, and high-fashion capsule collaborations keep the style culturally current.
+              </p>
+              <div class="mt-4 pt-3 border-t border-sand-200 text-[11px] text-cork-700 font-semibold">
+                → Design Consistency + Cultural Pull
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 1C. THE 4 Ps SYNTHESIS HUB (#four-ps)      -->
+    <!-- (Source: PowerPoint Slide 3)               -->
+    <!-- ========================================== -->
+    <section id="four-ps" class="presentation-section relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 border-b border-sand-200 bg-sand-50">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-sand-200">
+          <div>
+            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-2">
+              <span class="px-2 py-0.5 rounded bg-cork-200 text-cork-800">Slide 03</span>
+              <span>• The 4 Ps of Marketing</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-espresso-900">Birkenstock Sells Comfort as a Premium Product</h2>
+            <p class="text-base text-espresso-600 mt-2 max-w-3xl">
+              The operational marketing mix harmonizing German craftsmanship, value-based Indian rupee pricing, selective omnichannel placement, and organic subcultural promotion.
+            </p>
+          </div>
+          
+          <div class="mt-4 md:mt-0 flex items-center space-x-3">
+            <button data-slide-index="2" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full bg-espresso-900 text-sand-50 hover:bg-cork-700 text-xs font-semibold uppercase tracking-wider transition-colors">
+              <span>Present Slide 3</span>
+              <span>→</span>
+            </button>
+            <a href="#home" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full border border-sand-300 text-xs font-semibold uppercase tracking-wider text-espresso-700 hover:bg-sand-200 transition-colors">
+              <span>Home</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Ps Grid Matching Slide 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          
+          <!-- Product Block -->
+          <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm flex flex-col justify-between hover:border-cork-400 transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-sand-100 text-cork-800 text-xs font-bold uppercase tracking-wider font-mono">1st P</span>
+                <span class="text-[10px] uppercase font-bold text-espresso-400">German Made</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-espresso-900 mb-2">Product</h3>
+              <p class="text-xs text-espresso-700 leading-relaxed mb-4">
+                A contoured cork-latex footbed made in Germany, sold in three easy-to-spot shapes: the single-strap sandal, the double-strap sandal and the clog.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-sand-100">
+              <a href="#product" class="inline-flex items-center space-x-1 text-xs uppercase font-bold text-cork-700 hover:text-espresso-900">
+                <span>Explore Product Strategy</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Price Block -->
+          <div class="bg-white p-6 rounded-2xl border-2 border-cork-500 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-cork-700 text-white text-xs font-bold uppercase tracking-wider font-mono">2nd P</span>
+                <span class="text-xs font-mono font-bold text-cork-700">₹6,000 – ₹15,000+</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-espresso-900 mb-2">Price</h3>
+              <p class="text-xs text-espresso-700 leading-relaxed mb-4">
+                A premium range for upper-middle and high-income buyers. Single strap starts near ₹5,490, double strap runs to about ₹10,990 and clogs sit around ₹13,000.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-sand-100">
+              <a href="#price" class="inline-flex items-center space-x-1 text-xs uppercase font-bold text-cork-700 hover:text-espresso-900">
+                <span>View INR Price Strategy</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Place Block -->
+          <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm flex flex-col justify-between hover:border-cork-400 transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-sand-100 text-cork-800 text-xs font-bold uppercase tracking-wider font-mono">3rd P</span>
+                <span class="text-[10px] uppercase font-bold text-espresso-400">Omnichannel</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-espresso-900 mb-2">Place</h3>
+              <p class="text-xs text-espresso-700 leading-relaxed mb-4">
+                Own stores and website, premium retailers and online marketplaces. The focus is metro and tier-1 cities, with online reach into tier-2 towns.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-sand-100">
+              <a href="#place" class="inline-flex items-center space-x-1 text-xs uppercase font-bold text-cork-700 hover:text-espresso-900">
+                <span>View Distribution & Map</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Promotion Block -->
+          <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm flex flex-col justify-between hover:border-cork-400 transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-sand-100 text-cork-800 text-xs font-bold uppercase tracking-wider font-mono">4th P</span>
+                <span class="text-[10px] uppercase font-bold text-espresso-400">Cultural Pull</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-espresso-900 mb-2">Promotion</h3>
+              <p class="text-xs text-espresso-700 leading-relaxed mb-4">
+                Collaborations, influencers and limited-edition drops, all built on heritage and foot-health stories that explain why the footbed matters.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-sand-100">
+              <a href="#promotion" class="inline-flex items-center space-x-1 text-xs uppercase font-bold text-cork-700 hover:text-espresso-900">
+                <span>View Promotion Section</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <section id="product" class="presentation-section relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 border-b border-sand-200 bg-sand-100/40">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-sand-200">
+          <div>
+            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-2">
+              <span class="px-2 py-0.5 rounded bg-cork-200 text-cork-800">The 1st P</span>
+              <span>• Operational Marketing Mix</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-espresso-900">Product Strategy</h2>
+            <p class="text-base text-espresso-600 mt-2 max-w-2xl">
+              Deconstructing the orthopedic footbed, anatomical craftsmanship, and Kotler's Three Levels of Product.
+            </p>
+          </div>
+          
+          <div class="mt-4 md:mt-0 flex items-center space-x-3">
+            <a href="#home" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full border border-sand-300 text-xs font-semibold uppercase tracking-wider text-espresso-700 hover:bg-sand-200 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              <span>Back to Home</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Part A: Kotler's Three Levels of Product Interactive Breakdown -->
+        <div class="mb-16">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <h3 class="font-serif text-2xl font-bold text-espresso-900">Kotler's Three Levels of Product</h3>
+            <p class="text-xs uppercase tracking-widest text-cork-600 font-semibold mt-1">Core Benefit → Actual Product → Augmented Product</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- 1. Core Benefit -->
+            <div class="bg-white rounded-2xl p-7 border border-sand-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+              <div class="w-12 h-12 rounded-xl bg-sand-100 flex items-center justify-center text-cork-700 mb-5 group-hover:bg-cork-600 group-hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-cork-700">Level 1</span>
+              <h4 class="font-serif text-xl font-bold text-espresso-900 mt-1 mb-3">Core Customer Benefit</h4>
+              <p class="text-sm text-espresso-600 leading-relaxed mb-4">
+                <strong>Natural Orthopedic Wellness & Free Gait:</strong> The fundamental need solved is not mere covering for feet, but biomechanical health, natural spinal alignment, and fatigue-free walking support as nature intended.
+              </p>
+              <ul class="text-xs space-y-2 text-espresso-700 border-t border-sand-100 pt-4">
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Weight distribution across entire foot</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Support for longitudinal and transverse arches</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Deep heel cup stabilization</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. Actual Product -->
+            <div class="bg-white rounded-2xl p-7 border-2 border-cork-500/60 shadow-md hover:shadow-lg transition-shadow relative overflow-hidden group">
+              <div class="absolute top-0 right-0 bg-cork-600 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-bl-lg">Signature Asset</div>
+              <div class="w-12 h-12 rounded-xl bg-cork-100 flex items-center justify-center text-cork-800 mb-5 group-hover:bg-cork-600 group-hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-cork-700">Level 2</span>
+              <h4 class="font-serif text-xl font-bold text-espresso-900 mt-1 mb-3">Actual Tangible Product</h4>
+              <p class="text-sm text-espresso-600 leading-relaxed mb-4">
+                <strong>Anatomical Footbed & Raw Materials:</strong> The physical shoe engineered from sustainable cork oak bark, natural latex milk, dual jute layers, velvety suede footbed lining, and oiled leather with metal buckles.
+              </p>
+              <ul class="text-xs space-y-2 text-espresso-700 border-t border-sand-100 pt-4">
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Molded cork-latex composite core</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Raised toe grip promoting natural rolling motion</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Durable shock-absorbing EVA outsole</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 3. Augmented Product -->
+            <div class="bg-white rounded-2xl p-7 border border-sand-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+              <div class="w-12 h-12 rounded-xl bg-sand-100 flex items-center justify-center text-cork-700 mb-5 group-hover:bg-cork-600 group-hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-cork-700">Level 3</span>
+              <h4 class="font-serif text-xl font-bold text-espresso-900 mt-1 mb-3">Augmented Experience</h4>
+              <p class="text-sm text-espresso-600 leading-relaxed mb-4">
+                <strong>Repair Services, Heritage & Social Identity:</strong> Resoling and footbed replacement services, cork sealing maintenance, longevity ethos, and membership in an effortless, conscious lifestyle community.
+              </p>
+              <ul class="text-xs space-y-2 text-espresso-700 border-t border-sand-100 pt-4">
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Authorized resoling & repair programs</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Eco-conscious circular lifespan philosophy</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cork-600"></span>
+                  <span>Normcore cultural status & design recognition</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Part B: Three Featured Iconic Silhouettes (Source: Slides 4 & 5) -->
+        <div class="mb-16">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-3 border-b border-sand-200 gap-4">
+            <div>
+              <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-1">
+                <span class="px-2 py-0.5 rounded bg-cork-200 text-cork-800">Slides 04 & 05</span>
+                <span>• Product Portfolio & Strategy</span>
+              </div>
+              <h3 class="font-serif text-3xl font-bold text-espresso-900">Three Styles Stretch Comfort Across the Whole Day</h3>
+              <p class="text-xs sm:text-sm text-espresso-600 mt-1">Giving each style its own strategic portfolio role and differentiated go-to-market job.</p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-xs text-cork-700 font-mono font-semibold bg-sand-200 px-3 py-1 rounded-full">Indicative India Listings</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Product Card 1: Single Strap (The Easy Entry) -->
+            <div class="product-card bg-white rounded-3xl border border-sand-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+              <div>
+                <div class="relative h-64 overflow-hidden bg-sand-100">
+                  <img src="assets/images/gizeh-sandal.jpg" alt="Birkenstock Single Strap Sandal" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute top-4 left-4 bg-sand-200/90 text-cork-900 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+                    The Easy Entry
+                  </div>
+                  <div class="absolute bottom-4 right-4 bg-espresso-900/90 backdrop-blur px-3 py-1 rounded-md text-xs font-mono font-bold text-white">
+                    ₹5,490 – ₹8,490
+                  </div>
+                </div>
+
+                <div class="p-6">
+                  <div class="flex items-baseline justify-between mb-2">
+                    <h4 class="font-serif text-2xl font-bold text-espresso-900">Single strap</h4>
+                    <span class="text-xs font-semibold text-cork-700 uppercase tracking-widest">Entry Gateway</span>
+                  </div>
+                  <p class="text-xs text-espresso-500 font-medium mb-4">*Indicative India listings (Madrid / Gizeh entry)</p>
+                  
+                  <div class="space-y-3 text-xs text-espresso-700 bg-sand-50 p-4 rounded-xl border border-sand-200/60 mb-5">
+                    <div><strong class="text-espresso-900 block mb-0.5">Customer Need:</strong> Slip-on comfort that still looks put together.</div>
+                    <div><strong class="text-espresso-900 block mb-0.5">Use Occasions:</strong> Daily wear, leisure and warm-weather travel.</div>
+                    <div><strong class="text-espresso-900 block mb-0.5">Portfolio Role:</strong> A friendly first Birkenstock that brings new buyers in.</div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-cork-50 border border-cork-200 text-xs text-cork-900 font-medium mb-4">
+                    <strong>GTM Push (Slide 5):</strong> Push with social content and online marketplaces.
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-6 pb-6 pt-0">
+                <button class="open-product-modal-btn w-full py-2.5 px-4 rounded-xl border border-cork-600 text-cork-700 hover:bg-cork-600 hover:text-white transition-all text-xs font-bold uppercase tracking-wider" data-product="single">
+                  Inspect Easy Entry Specs
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 2: Double Strap (The Hero - Arizona) -->
+            <div class="product-card bg-white rounded-3xl border-2 border-cork-500 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group flex flex-col justify-between">
+              <div>
+                <div class="relative h-64 overflow-hidden bg-sand-100">
+                  <img src="assets/images/hero-arizona.jpg" alt="Birkenstock Double Strap Arizona Sandal" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute top-4 left-4 bg-cork-700 text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+                    The Hero
+                  </div>
+                  <div class="absolute bottom-4 right-4 bg-espresso-900/90 backdrop-blur px-3 py-1 rounded-md text-xs font-mono font-bold text-white">
+                    ₹5,943 – ₹10,990
+                  </div>
+                </div>
+
+                <div class="p-6">
+                  <div class="flex items-baseline justify-between mb-2">
+                    <h4 class="font-serif text-2xl font-bold text-espresso-900">Double strap</h4>
+                    <span class="text-xs font-semibold text-cork-700 uppercase tracking-widest">Global Icon (1973)</span>
+                  </div>
+                  <p class="text-xs text-espresso-500 font-medium mb-4">*Indicative India listings (Arizona silhouette)</p>
+                  
+                  <div class="space-y-3 text-xs text-espresso-700 bg-sand-50 p-4 rounded-xl border border-sand-200/60 mb-5">
+                    <div><strong class="text-espresso-900 block mb-0.5">Customer Need:</strong> Adjustable support that still makes a style statement.</div>
+                    <div><strong class="text-espresso-900 block mb-0.5">Use Occasions:</strong> Daily wear, travel and leisure.</div>
+                    <div><strong class="text-espresso-900 block mb-0.5">Portfolio Role:</strong> The classic shape that shows off the footbed and the design.</div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-cork-100 border border-cork-300 text-xs text-cork-900 font-medium mb-4">
+                    <strong>GTM Push (Slide 5):</strong> Push with our own website and exclusive stores.
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-6 pb-6 pt-0">
+                <button class="open-product-modal-btn w-full py-2.5 px-4 rounded-xl bg-cork-700 text-white hover:bg-cork-800 transition-all text-xs font-bold uppercase tracking-wider" data-product="arizona">
+                  Inspect Hero Specs
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 3: Clog (The All-Rounder - Boston) -->
+            <div class="product-card bg-white rounded-3xl border border-sand-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+              <div>
+                <div class="relative h-64 overflow-hidden bg-sand-100">
+                  <img src="assets/images/boston-clog.jpg" alt="Birkenstock Boston Clog" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute top-4 left-4 bg-espresso-900 text-sand-50 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+                    The All-Rounder
+                  </div>
+                  <div class="absolute bottom-4 right-4 bg-espresso-900/90 backdrop-blur px-3 py-1 rounded-md text-xs font-mono font-bold text-white">
+                    ₹12,990 – ₹13,990
+                  </div>
+                </div>
+
+                <div class="p-6">
+                  <div class="flex items-baseline justify-between mb-2">
+                    <h4 class="font-serif text-2xl font-bold text-espresso-900">Clog</h4>
+                    <span class="text-xs font-semibold text-cork-700 uppercase tracking-widest">Utility Mule (1979)</span>
+                  </div>
+                  <p class="text-xs text-espresso-500 font-medium mb-4">*Indicative India listings (Boston Clog)</p>
+                  
+                  <div class="space-y-3 text-xs text-espresso-700 bg-sand-50 p-4 rounded-xl border border-sand-200/60 mb-5">
+                    <div><strong class="text-espresso-900 block mb-0.5">Customer Need:</strong> All-day comfort with more coverage.</div>
+                    <div><strong class="text-espresso-900 block mb-0.5">Use Occasions:</strong> Daily wear, travel and cooler days.</div>
+                    <div><strong class="text-espresso-900 block mb-0.5">Portfolio Role:</strong> Takes the brand from sandal season to everyday utility.</div>
+                  </div>
+
+                  <div class="p-3 rounded-xl bg-cork-50 border border-cork-200 text-xs text-cork-900 font-medium mb-4">
+                    <strong>GTM Push (Slide 5):</strong> Push with limited drops and collaborations.
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-6 pb-6 pt-0">
+                <button class="open-product-modal-btn w-full py-2.5 px-4 rounded-xl border border-cork-600 text-cork-700 hover:bg-cork-600 hover:text-white transition-all text-xs font-bold uppercase tracking-wider" data-product="boston">
+                  Inspect All-Rounder Specs
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Part C: Interactive Product Comparison Table (#product-comparison) -->
+        <div id="product-comparison" class="mb-16 bg-white rounded-3xl border border-sand-200 p-6 sm:p-8 shadow-sm">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between pb-6 mb-6 border-b border-sand-200 gap-4">
+            <div>
+              <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-1">
+                <span class="w-2 h-2 rounded-full bg-cork-600"></span>
+                <span>Strategic Comparison Architecture</span>
+              </div>
+              <h3 class="font-serif text-3xl font-bold text-espresso-900">Product Portfolio Comparison Table</h3>
+              <p class="text-xs sm:text-sm text-espresso-600 mt-1">Multi-dimensional analysis of coverage, styling versatility, indicative INR price tiers, and portfolio roles.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2">
+              <button class="product-filter-btn px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors bg-cork-700 text-white shadow-sm" data-filter="all">All Silhouettes</button>
+              <button class="product-filter-btn px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors bg-sand-100 text-espresso-700 hover:bg-sand-200" data-filter="single">The Easy Entry</button>
+              <button class="product-filter-btn px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors bg-sand-100 text-espresso-700 hover:bg-sand-200" data-filter="double">The Hero</button>
+              <button class="product-filter-btn px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors bg-sand-100 text-espresso-700 hover:bg-sand-200" data-filter="clog">The All-Rounder</button>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-espresso-800 border-collapse">
+              <thead>
+                <tr class="border-b border-sand-300 bg-sand-50/70 text-[11px] uppercase tracking-wider text-cork-800 font-bold">
+                  <th class="py-3 px-4">Silhouette & Role</th>
+                  <th class="py-3 px-4">Indicative Price (₹)</th>
+                  <th class="py-3 px-4">Coverage & Design</th>
+                  <th class="py-3 px-4">Styling Versatility</th>
+                  <th class="py-3 px-4">Use Occasions</th>
+                  <th class="py-3 px-4">Comfort Proposition</th>
+                  <th class="py-3 px-4">Audience Fit</th>
+                  <th class="py-3 px-4">Channel Push</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-sand-200">
+                
+                <!-- Row 1: Single Strap -->
+                <tr class="comparison-row hover:bg-sand-50/50 transition-colors" data-product-category="single">
+                  <td class="py-4 px-4 font-semibold">
+                    <div class="flex items-center space-x-3">
+                      <img src="assets/images/gizeh-sandal.jpg" class="w-10 h-10 rounded-lg object-cover">
+                      <div>
+                        <span class="block font-serif text-sm font-bold text-espresso-900">Single strap</span>
+                        <span class="text-[10px] uppercase font-bold text-cork-700 bg-sand-200 px-1.5 py-0.5 rounded">The Easy Entry</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 font-mono font-bold text-cork-800">₹5,490 – ₹8,490</td>
+                  <td class="py-4 px-4">Minimalist open slip-on; single forefoot/instep strap with pin buckle.</td>
+                  <td class="py-4 px-4">Warm-weather casual, beachwear, resort chic, light weekend wear.</td>
+                  <td class="py-4 px-4">Daily wear, warm-weather travel, leisure downtime.</td>
+                  <td class="py-4 px-4">Lightweight natural rolling gait; natural reflex toe exercising.</td>
+                  <td class="py-4 px-4">First-time buyers, younger aspirational demographic, warm-climate shoppers.</td>
+                  <td class="py-4 px-4"><span class="px-2 py-1 rounded bg-sand-100 font-semibold text-espresso-700">Social content & marketplaces</span></td>
+                </tr>
+
+                <!-- Row 2: Double Strap (Arizona) -->
+                <tr class="comparison-row hover:bg-sand-50/50 transition-colors bg-cork-50/30" data-product-category="double">
+                  <td class="py-4 px-4 font-semibold">
+                    <div class="flex items-center space-x-3">
+                      <img src="assets/images/hero-arizona.jpg" class="w-10 h-10 rounded-lg object-cover">
+                      <div>
+                        <span class="block font-serif text-sm font-bold text-espresso-900">Double strap (Arizona)</span>
+                        <span class="text-[10px] uppercase font-bold text-white bg-cork-700 px-1.5 py-0.5 rounded">The Hero</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 font-mono font-bold text-cork-700">₹5,943 – ₹10,990</td>
+                  <td class="py-4 px-4">Dual adjustable buckled bands; maximum footbed visibility and instep security.</td>
+                  <td class="py-4 px-4">Universal: denim, tailoring, loungewear, summer dresses, socks-and-sandals.</td>
+                  <td class="py-4 px-4">Daily commute, urban travel, leisure, all-day standing.</td>
+                  <td class="py-4 px-4">Balanced tension distribution; prevents toe clawing; deep heel stabilization.</td>
+                  <td class="py-4 px-4">Universal appeal: core 22–45 professionals, style curators, podiatry seekers.</td>
+                  <td class="py-4 px-4"><span class="px-2 py-1 rounded bg-cork-100 font-bold text-cork-800">Own website & exclusive stores</span></td>
+                </tr>
+
+                <!-- Row 3: Boston Clog -->
+                <tr class="comparison-row hover:bg-sand-50/50 transition-colors" data-product-category="clog">
+                  <td class="py-4 px-4 font-semibold">
+                    <div class="flex items-center space-x-3">
+                      <img src="assets/images/boston-clog.jpg" class="w-10 h-10 rounded-lg object-cover">
+                      <div>
+                        <span class="block font-serif text-sm font-bold text-espresso-900">Boston Clog</span>
+                        <span class="text-[10px] uppercase font-bold text-espresso-900 bg-sand-200 px-1.5 py-0.5 rounded">The All-Rounder</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 font-mono font-bold text-espresso-900">₹12,990 – ₹13,990</td>
+                  <td class="py-4 px-4">Enclosed rounded toe box with adjustable instep strap and open heel.</td>
+                  <td class="py-4 px-4">4-season utility: wide-leg trousers, streetwear, autumnal layers, winter knit socks.</td>
+                  <td class="py-4 px-4">Office work, cooler seasons, studio creative work, daily year-round utility.</td>
+                  <td class="py-4 px-4">Enclosed forefoot protection with anatomical cork-latex arch contouring.</td>
+                  <td class="py-4 px-4">Trendsetters, culinary/creative professionals, high-income fashion enthusiasts.</td>
+                  <td class="py-4 px-4"><span class="px-2 py-1 rounded bg-sand-200 font-semibold text-espresso-800">Limited drops & collaborations</span></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-sand-200 text-xs text-espresso-500 italic">
+            *Indicative listings for Indian market; actual pricing varies with leather grade, width fittings, and authorized channel.
+          </div>
+        </div>
+
+        <!-- Part D: Functional vs Emotional Value Comparison Matrix -->
+        <div class="mb-16">
+          <div class="text-center max-w-2xl mx-auto mb-8">
+            <h3 class="font-serif text-2xl font-bold text-espresso-900">Functional versus Emotional Value Matrix</h3>
+            <p class="text-xs uppercase tracking-widest text-cork-700 font-semibold mt-1">Why Consumers Perceive Superior Value</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-white p-7 rounded-2xl border border-sand-200 shadow-sm">
+              <div class="inline-flex items-center space-x-2 text-xs font-bold text-cork-700 uppercase tracking-widest mb-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-cork-600"></span>
+                <span>Functional Value (Biomechanical Utility)</span>
+              </div>
+              <h4 class="font-serif text-xl font-bold text-espresso-900 mb-3">Orthopedic Anatomy & Durability</h4>
+              <ul class="space-y-3 text-xs text-espresso-700">
+                <li class="flex items-start space-x-2.5">
+                  <span class="text-cork-600 font-bold font-mono">01.</span>
+                  <span><strong>Anatomical Weight Redistribution:</strong> Relieves metatarsal and joint pressure by mirroring a footprint in natural sand.</span>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <span class="text-cork-600 font-bold font-mono">02.</span>
+                  <span><strong>Cork-Latex Resiliency:</strong> Flexible shock absorption softens impact on knees, hips, and lower back during hard-surface walking.</span>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <span class="text-cork-600 font-bold font-mono">03.</span>
+                  <span><strong>Replaceable EVA Soles:</strong> Multi-year longevity through resoling and leather conditioning programs.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl border border-sand-200 shadow-sm">
+              <div class="inline-flex items-center space-x-2 text-xs font-bold text-cork-700 uppercase tracking-widest mb-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-espresso-800"></span>
+                <span>Emotional Value (Cultural & Lifestyle Identity)</span>
+              </div>
+              <h4 class="font-serif text-xl font-bold text-espresso-900 mb-3">Effortless Self-Expression & Normcore Chic</h4>
+              <ul class="space-y-3 text-xs text-espresso-700">
+                <li class="flex items-start space-x-2.5">
+                  <span class="text-cork-600 font-bold font-mono">01.</span>
+                  <span><strong>Unapologetic Authenticity:</strong> “Ugly shoe” confidence signaling that the wearer prioritizes personal well-being over fleeting vanity.</span>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <span class="text-cork-600 font-bold font-mono">02.</span>
+                  <span><strong>Conscious Lifestyle Alignment:</strong> Natural renewable materials (cork oak, latex, jute) reflecting mindful, non-disposable consumption.</span>
+                </li>
+                <li class="flex items-start space-x-2.5">
+                  <span class="text-cork-600 font-bold font-mono">03.</span>
+                  <span><strong>Understated Luxury Status:</strong> Culturally codified fashion staple worn effortlessly by creative leaders, actors, and style curators.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Part E: Strengths, Limitations & Life-Cycle Implications -->
+        <div class="p-8 rounded-3xl bg-sand-50 border border-sand-200">
+          <div class="max-w-3xl mb-6">
+            <span class="text-xs uppercase font-bold tracking-widest text-cork-700 block mb-1">Strategic Product Evaluation</span>
+            <h3 class="font-serif text-2xl font-bold text-espresso-900">Strengths, Limitations & Product Life-Cycle Implications</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-espresso-700">
+            <div class="bg-white p-5 rounded-2xl border border-sand-200">
+              <h5 class="font-bold text-espresso-900 text-sm mb-2 text-cork-700">Core Strengths</h5>
+              <ul class="space-y-2">
+                <li>• Inimitable European manufacturing footbed standard.</li>
+                <li>• High brand equity insulated from fast-fashion replication.</li>
+                <li>• Cross-generational appeal extending from 18 to 70+.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-sand-200">
+              <h5 class="font-bold text-espresso-900 text-sm mb-2 text-espresso-800">Operational Limitations</h5>
+              <ul class="space-y-2">
+                <li>• Break-in period requires initial consumer adaptation.</li>
+                <li>• Raw cork sensitivity to heavy torrential monsoon moisture.</li>
+                <li>• High initial purchase price barrier in developing price-sensitive markets.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-sand-200">
+              <h5 class="font-bold text-espresso-900 text-sm mb-2 text-cork-700">Product Life-Cycle (PLC)</h5>
+              <ul class="space-y-2">
+                <li>• Mature core silhouettes (Arizona 1973, Boston 1979) sustained via continuous rejuvenation cycles.</li>
+                <li>• Capsule collaborations (1774 line) renew cultural hype without retooling footbed dies.</li>
+                <li>• Low obsolescence risk guarantees high inventory predictability.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 3. PRICE STRATEGY IN INR (#price)          -->
+    <!-- (Source: PowerPoint Slides 3, 4, 9)        -->
+    <!-- ========================================== -->
+    <section id="price" class="presentation-section relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 border-b border-sand-200 bg-sand-50">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-sand-200">
+          <div>
+            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-2">
+              <span class="px-2 py-0.5 rounded bg-cork-200 text-cork-800">The 2nd P</span>
+              <span>• Operational Marketing Mix (India Pricing in ₹)</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-espresso-900">Price Strategy in Indian Rupees (₹)</h2>
+            <p class="text-base text-espresso-600 mt-2 max-w-3xl">
+              Value-based premium positioning, German craftsmanship trust signals, and long-term cost-per-wear perceived value for the Indian consumer.
+            </p>
+          </div>
+          
+          <div class="mt-4 md:mt-0 flex items-center space-x-3">
+            <span class="px-3 py-1.5 rounded-full bg-cork-100 text-cork-900 font-mono font-bold text-xs">
+              Indicative Range: ₹6,000 – ₹15,000+
+            </span>
+            <a href="#home" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full border border-sand-300 text-xs font-semibold uppercase tracking-wider text-espresso-700 hover:bg-sand-200 transition-colors">
+              <span>Home</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Strategic Narrative Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          
+          <div class="bg-white p-7 rounded-2xl border border-sand-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="text-cork-600 font-serif text-2xl font-bold mb-2">01. Premium Value-Based Pricing</div>
+              <h3 class="font-serif text-lg font-bold text-espresso-900 mb-2">Pricing Power Rooted in Biomechanics</h3>
+              <p class="text-xs text-espresso-600 leading-relaxed mb-4">
+                Birkenstock rejects cost-plus or race-to-the-bottom discounting. Price tags reflect the proprietary cork-latex footbed tooling, sustainable natural materials, and the German manufacturing guarantee.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-sand-100 text-[11px] text-cork-800 font-semibold">
+              → Value Signal: High initial price signals uncompromising health efficacy.
+            </div>
+          </div>
+
+          <div class="bg-white p-7 rounded-2xl border border-sand-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="text-cork-600 font-serif text-2xl font-bold mb-2">02. Heritage as a Value Signal</div>
+              <h3 class="font-serif text-lg font-bold text-espresso-900 mb-2">250-Year German Pedigree (1774–2023)</h3>
+              <p class="text-xs text-espresso-600 leading-relaxed mb-4">
+                With a craft lineage dating back to Johann Adam Birkenstock in 1774, consumers do not view ₹5,490–₹13,990 as an expense, but as a multi-year wellness investment in orthopedic spine and posture care.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-sand-100 text-[11px] text-cork-800 font-semibold">
+              → Willingness to Pay: Trust eliminates substitute search costs.
+            </div>
+          </div>
+
+          <div class="bg-white p-7 rounded-2xl border border-sand-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="text-cork-600 font-serif text-2xl font-bold mb-2">03. Price Inelasticity & Margin Discipline</div>
+              <h3 class="font-serif text-lg font-bold text-espresso-900 mb-2">Strict M.A.P. & Zero Discount Dumping</h3>
+              <p class="text-xs text-espresso-600 leading-relaxed mb-4">
+                High brand loyalty shields against price wars. Birkenstock enforces strict Minimum Advertised Price (M.A.P.) policies, avoiding frequent discounts that would erode premium status.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-sand-100 text-[11px] text-cork-800 font-semibold">
+              → Brand Equity Shield: Protects authorized dealer and DTC margins.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Part B: Three Indicative Pricing Tiers in ₹ (from PowerPoint Slides 3, 4, 9) -->
+        <div class="bg-white rounded-3xl border border-sand-200 p-8 shadow-sm mb-16">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-sand-200 gap-4">
+            <div>
+              <span class="text-xs uppercase font-bold tracking-widest text-cork-700 block mb-1">Portfolio Price Spectrum</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-900">Indicative Indian Rupee (₹) Pricing Architecture</h3>
+              <p class="text-xs text-espresso-600 mt-1">Source: Brand Builders PowerPoint Slides 3, 4, & 9. Indicative India retail listings.</p>
+            </div>
+            <div class="text-right">
+              <span class="inline-block px-3 py-1 rounded-full bg-sand-100 border border-sand-300 text-[11px] font-semibold text-espresso-600">
+                *Indicative India listings; actual retail prices depend on model, leather finish, width & retailer.
+              </span>
+            </div>
+          </div>
+
+          <!-- Conceptual Comparison Grid in ₹ -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Tier 1: Single Strap -->
+            <div class="bg-sand-50 rounded-2xl p-6 border border-sand-200 relative flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-cork-700">The Easy Entry</span>
+                <h4 class="font-serif text-xl font-bold text-espresso-900 mt-1">Single strap (Madrid / Gizeh)</h4>
+                <div class="text-2xl font-bold text-espresso-900 my-3 font-serif">₹5,490 – ₹8,490</div>
+                <p class="text-xs text-espresso-600 leading-relaxed mb-4">
+                  Slip-on comfort that still looks put together. Aimed at first-time buyers and warm-weather wear.
+                </p>
+              </div>
+              <div class="space-y-2 text-[11px] text-espresso-700 bg-white p-3 rounded-lg border border-sand-200">
+                <div><strong>Target Buyer:</strong> First-time brand entrants, college students, warm-weather travelers.</div>
+                <div><strong>Distribution Push:</strong> Social content and online marketplaces.</div>
+              </div>
+            </div>
+
+            <!-- Tier 2: Double Strap -->
+            <div class="bg-cork-50/60 rounded-2xl p-6 border-2 border-cork-500/80 relative flex flex-col justify-between shadow-sm">
+              <div class="absolute -top-3 right-6 bg-cork-600 text-white text-[10px] uppercase font-bold tracking-widest px-3 py-0.5 rounded-full">
+                The Hero
+              </div>
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-cork-700">The Brand Core</span>
+                <h4 class="font-serif text-xl font-bold text-espresso-900 mt-1">Double strap (Arizona)</h4>
+                <div class="text-2xl font-bold text-cork-700 my-3 font-serif">₹5,943 – ₹10,990</div>
+                <p class="text-xs text-espresso-600 leading-relaxed mb-4">
+                  Adjustable support that still makes a style statement. The classic shape that shows off the footbed and the design.
+                </p>
+              </div>
+              <div class="space-y-2 text-[11px] text-espresso-700 bg-white p-3 rounded-lg border border-sand-200">
+                <div><strong>Target Buyer:</strong> Core urban professionals aged 22–40, style curators, all-day standing workers.</div>
+                <div><strong>Distribution Push:</strong> Owned website and exclusive retail boutiques.</div>
+              </div>
+            </div>
+
+            <!-- Tier 3: Clog -->
+            <div class="bg-espresso-900 rounded-2xl p-6 text-sand-50 relative flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-cork-300">The All-Rounder</span>
+                <h4 class="font-serif text-xl font-bold text-white mt-1">Boston Clog & Collabs</h4>
+                <div class="text-2xl font-bold text-sand-50 my-3 font-serif">₹12,990 – ₹13,990+</div>
+                <p class="text-xs text-sand-300 leading-relaxed mb-4">
+                  All-day comfort with more coverage. Takes the brand from sandal season to everyday utility for cooler days and work.
+                </p>
+              </div>
+              <div class="space-y-2 text-[11px] text-sand-200 bg-espresso-800 p-3 rounded-lg border border-espresso-700">
+                <div><strong>Target Buyer:</strong> High-income creatives, culinary/studio professionals, street-style trendsetters.</div>
+                <div><strong>Distribution Push:</strong> Limited drops and high-fashion collaborations.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Part C: Conceptual Price-Positioning Map -->
+        <div class="mb-16 bg-white rounded-3xl border border-sand-200 p-8 shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-sand-200 gap-4">
+            <div>
+              <span class="text-xs uppercase font-bold tracking-widest text-cork-700 block mb-1">Strategic Landscape</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-900">Conceptual Price-Positioning Map</h3>
+              <p class="text-xs text-espresso-600 mt-1">Ergonomic Orthopedic Support versus Price Point & Fashion Cachet.</p>
+            </div>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sand-100 text-espresso-600 border border-sand-200">
+              *Conceptual Model — Illustrative Academic Positioning
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Perceptual Visual Coordinate Box -->
+            <div class="lg:col-span-7 bg-sand-50 rounded-2xl p-6 border border-sand-300 relative min-h-[340px] flex flex-col justify-between">
+              
+              <!-- Top Label: High Ergonomic Support -->
+              <div class="text-center">
+                <span class="px-3 py-1 rounded bg-sand-200 text-cork-800 font-bold text-[10px] uppercase tracking-wider">▲ High Anatomical & Ergonomic Support</span>
+              </div>
+
+              <!-- Map Coordinate Plane -->
+              <div class="relative flex-1 my-4 flex items-center justify-center">
+                <!-- Axes Lines -->
+                <div class="absolute inset-x-0 h-0.5 bg-sand-300 top-1/2 -translate-y-1/2"></div>
+                <div class="absolute inset-y-0 w-0.5 bg-sand-300 left-1/2 -translate-x-1/2"></div>
+
+                <!-- Quadrant 1: Birkenstock Sweet Spot -->
+                <div class="absolute top-4 right-6 bg-cork-700 text-white p-3 rounded-xl shadow-lg border-2 border-cork-500 max-w-[200px] text-center">
+                  <div class="text-xs font-bold">BIRKENSTOCK</div>
+                  <div class="text-[10px] text-cork-200 font-mono mt-0.5">₹5,490 – ₹13,990+</div>
+                  <div class="text-[9px] text-sand-100 mt-1">High Support + High Fashion Prestige</div>
+                </div>
+
+                <!-- Quadrant 2: Sterile Medical Footwear -->
+                <div class="absolute top-6 left-6 bg-white p-2.5 rounded-lg border border-sand-300 max-w-[170px] text-center text-espresso-600 text-[10px]">
+                  <strong>Sterile Orthopedic Shoes</strong>
+                  <div class="text-[9px] text-espresso-400">High Support / Low Fashion Appeal</div>
+                </div>
+
+                <!-- Quadrant 3: Mass Cheap Flip-Flops -->
+                <div class="absolute bottom-6 left-6 bg-white p-2.5 rounded-lg border border-sand-300 max-w-[170px] text-center text-espresso-600 text-[10px]">
+                  <strong>Mass Flat Foam Sandals</strong>
+                  <div class="text-[9px] text-espresso-400">Low Price (₹500–₹1,500) / Zero Arch Support</div>
+                </div>
+
+                <!-- Quadrant 4: Painful Designer Luxury Shoes -->
+                <div class="absolute bottom-4 right-6 bg-white p-2.5 rounded-lg border border-sand-300 max-w-[180px] text-center text-espresso-600 text-[10px]">
+                  <strong>Luxury Designer Heels</strong>
+                  <div class="text-[9px] text-espresso-400">High Price (₹30,000+) / Painful Ergonomics</div>
+                </div>
+              </div>
+
+              <!-- Bottom Label: Low Support -->
+              <div class="flex items-center justify-between text-[10px] uppercase font-bold text-espresso-400 px-2">
+                <span>◀ Mass Value Pricing</span>
+                <span>▼ Flat / Zero Ergonomics</span>
+                <span>High Luxury Price ▶</span>
+              </div>
+            </div>
+
+            <!-- Strategic Narrative -->
+            <div class="lg:col-span-5 space-y-4 text-xs text-espresso-700">
+              <div class="p-4 rounded-xl bg-cork-50 border border-cork-200">
+                <h4 class="font-bold text-cork-800 text-sm mb-1">The Non-Substitute Advantage</h4>
+                <p class="leading-relaxed">
+                  Unlike traditional fashion sandals that sacrifice spinal health for aesthetics, Birkenstock occupies an inimitable quadrant where podiatric credibility directly fuels fashion authority.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-sand-50 border border-sand-200">
+                <h4 class="font-bold text-espresso-900 text-sm mb-1">Affordability Barrier vs Willingness-to-Pay</h4>
+                <p class="leading-relaxed">
+                  In India, where average footwear sells below ₹1,500, Birkenstock's ₹5,490+ entry price creates a hurdle for mass buyers. Birkenstock overcomes this by framing footwear as preventive healthcare.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-sand-50 border border-sand-200">
+                <h4 class="font-bold text-espresso-900 text-sm mb-1">Risks of Discounting</h4>
+                <p class="leading-relaxed">
+                  Frequent discounting would dilute perceived quality and destroy the status signal that upper-middle-class Indian buyers covet. Premium pricing integrity must remain uncompromised.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Part D: Interactive Perceived Value Calculator in ₹ (Cost-Per-Wear) -->
+        <div class="bg-sand-100/70 rounded-3xl p-8 border border-sand-300">
+          <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-8">
+              <span class="text-xs uppercase font-bold tracking-widest text-cork-700">Interactive Economics in Indian Rupees (₹)</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-900 mt-1">What does one comfortable day cost?</h3>
+              <p class="text-xs sm:text-sm text-espresso-600 mt-2">
+                Adjust the three sliders. The simple formula is: price ÷ total wearing days = cost per wear.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+              <div class="space-y-5">
+                <div>
+                  <div class="flex justify-between text-xs font-semibold text-espresso-800 mb-1">
+                    <span>Retail Purchase Price (₹)</span>
+                    <span id="calc-price-display" class="text-cork-700 font-bold font-mono">₹8,990</span>
+                  </div>
+                  <input id="calc-price-slider" type="range" min="5490" max="15000" step="250" value="8990" class="w-full accent-cork-600 cursor-pointer">
+                  <div class="flex justify-between text-[10px] text-espresso-400 mt-1 font-mono">
+                    <span>₹5,490 (Single Strap)</span>
+                    <span>₹8,990 (Arizona)</span>
+                    <span>₹13,990 (Boston Clog)</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs font-semibold text-espresso-800 mb-1">
+                    <span>Lifespan of Wear (Years)</span>
+                    <span id="calc-years-display" class="text-cork-700 font-bold">3 Years</span>
+                  </div>
+                  <input id="calc-years-slider" type="range" min="1" max="6" step="1" value="3" class="w-full accent-cork-600 cursor-pointer">
+                  <div class="flex justify-between text-[10px] text-espresso-400 mt-1">
+                    <span>1 Year</span>
+                    <span>3 Years (Average)</span>
+                    <span>6 Years (With Resoling)</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs font-semibold text-espresso-800 mb-1">
+                    <span>Wearing Days Per Year</span>
+                    <span id="calc-days-display" class="text-cork-700 font-bold">180 Days / Year</span>
+                  </div>
+                  <input id="calc-days-slider" type="range" min="60" max="365" step="15" value="180" class="w-full accent-cork-600 cursor-pointer">
+                  <div class="flex justify-between text-[10px] text-espresso-400 mt-1">
+                    <span>60 Days (Weekend)</span>
+                    <span>180 Days (Regular)</span>
+                    <span>300 Days (Daily)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Output Badge -->
+              <div class="bg-sand-50 p-6 rounded-xl border border-sand-200 text-center flex flex-col justify-center items-center">
+                <span class="text-xs uppercase tracking-widest text-cork-700 font-bold">Perceived Cost Per Wear</span>
+                <div id="calc-result" class="font-serif text-5xl font-bold text-espresso-900 my-2 font-mono">₹16.65</div>
+                <span class="text-xs text-espresso-500 font-medium">per day of anatomical support</span>
+                
+                <div id="calc-comparison-text" class="mt-4 pt-4 border-t border-sand-200 text-[11px] text-espresso-600 leading-tight">
+                  At <strong>₹16.65 per wear</strong>, Birkenstock delivers exceptional economic value. In contrast, a disposable ₹2,500 fast-fashion sandal worn for 90 days before failure costs <strong>₹27.78 per wear</strong> with zero arch support.
+                </div>
+                <div id="calc-savings-text" class="mt-3 px-3 py-2 rounded-lg bg-cork-100 text-cork-900 text-[11px] font-semibold">
+                  You save ₹11.13 per comfortable day compared with the disposable alternative.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 4. PLACE SECTION (#place)                  -->
+    <!-- ========================================== -->
+    <section id="place" class="presentation-section relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 border-b border-sand-200 bg-sand-100/30">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-sand-200">
+          <div>
+            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-2">
+              <span class="px-2 py-0.5 rounded bg-cork-200 text-cork-800">Slide 03</span>
+              <span>• The 3rd P: Operational Marketing Mix</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-espresso-900">Place & Distribution Strategy</h2>
+            <p class="text-base text-espresso-600 mt-2 max-w-3xl">
+              Selective omnichannel distribution, sensory flagship architecture, controlled digital reach, and protecting brand equity from mass-market discounting.
+            </p>
+          </div>
+          
+          <div class="mt-4 md:mt-0 flex flex-wrap items-center gap-3">
+            <button data-slide-index="2" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full bg-espresso-900 text-sand-50 hover:bg-cork-700 text-xs font-semibold uppercase tracking-wider transition-colors">
+              <span>Present Slide 3</span>
+              <span>→</span>
+            </button>
+            <a href="#world-map-container" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full bg-cork-700 text-white hover:bg-cork-800 text-xs font-semibold uppercase tracking-wider transition-colors">
+              <span>Explore World Map</span>
+            </a>
+            <a href="#home" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full border border-sand-300 text-xs font-semibold uppercase tracking-wider text-espresso-700 hover:bg-sand-200 transition-colors">
+              <span>Home</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Part A: Interactive 4-Stage Distribution Flow -->
+        <div class="bg-white rounded-3xl border border-sand-200 p-8 shadow-sm mb-16">
+          <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+              <span class="text-xs uppercase font-bold tracking-widest text-cork-700">Value Chain Architecture</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-900 mt-1">
+                BRAND → DISTRIBUTION CHANNEL → RETAIL / DIGITAL TOUCHPOINT → CUSTOMER
+              </h3>
+              <p class="text-xs sm:text-sm text-espresso-600 mt-2">
+                Click any stage of the distribution continuum to reveal its operational role, strategic benefits, limitations, and channel control governance.
+              </p>
+            </div>
+
+            <!-- Flow Stages Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              
+              <!-- Stage 1: Brand -->
+              <button class="flow-stage-btn text-left p-5 rounded-2xl border-2 border-cork-600 bg-cork-50 transition-all flex flex-col justify-between group active-flow-stage" data-stage="brand">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-cork-700 text-white">Stage 01</span>
+                    <span class="w-3 h-3 rounded-full bg-cork-600"></span>
+                  </div>
+                  <h4 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-700 transition-colors">Brand Source</h4>
+                  <p class="text-xs text-espresso-600 mt-1">German manufacturing & centralized footbed production.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-sand-200 text-[10px] font-bold text-cork-700 uppercase tracking-wider flex items-center justify-between">
+                  <span>Inspect Role</span>
+                  <span>→</span>
+                </div>
+              </button>
+
+              <!-- Stage 2: Distribution Channel -->
+              <button class="flow-stage-btn text-left p-5 rounded-2xl border border-sand-300 bg-white hover:border-cork-400 transition-all flex flex-col justify-between group" data-stage="channel">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-sand-200 text-espresso-800">Stage 02</span>
+                    <span class="w-3 h-3 rounded-full bg-sand-300 group-hover:bg-cork-600 transition-colors"></span>
+                  </div>
+                  <h4 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-700 transition-colors">Distribution Channel</h4>
+                  <p class="text-xs text-espresso-600 mt-1">DTC warehouses, regional fulfillment, and vetted wholesale.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-sand-200 text-[10px] font-bold text-espresso-500 uppercase tracking-wider flex items-center justify-between">
+                  <span>Inspect Logistics</span>
+                  <span>→</span>
+                </div>
+              </button>
+
+              <!-- Stage 3: Retail / Digital Touchpoint -->
+              <button class="flow-stage-btn text-left p-5 rounded-2xl border border-sand-300 bg-white hover:border-cork-400 transition-all flex flex-col justify-between group" data-stage="touchpoint">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-sand-200 text-espresso-800">Stage 03</span>
+                    <span class="w-3 h-3 rounded-full bg-sand-300 group-hover:bg-cork-600 transition-colors"></span>
+                  </div>
+                  <h4 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-700 transition-colors">Retail & Touchpoint</h4>
+                  <p class="text-xs text-espresso-600 mt-1">Flagship boutiques, Birkenstock.com, and curated luxury doors.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-sand-200 text-[10px] font-bold text-espresso-500 uppercase tracking-wider flex items-center justify-between">
+                  <span>Inspect Experience</span>
+                  <span>→</span>
+                </div>
+              </button>
+
+              <!-- Stage 4: Customer -->
+              <button class="flow-stage-btn text-left p-5 rounded-2xl border border-sand-300 bg-white hover:border-cork-400 transition-all flex flex-col justify-between group" data-stage="customer">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-sand-200 text-espresso-800">Stage 04</span>
+                    <span class="w-3 h-3 rounded-full bg-sand-300 group-hover:bg-cork-600 transition-colors"></span>
+                  </div>
+                  <h4 class="font-serif text-lg font-bold text-espresso-900 group-hover:text-cork-700 transition-colors">End Consumer</h4>
+                  <p class="text-xs text-espresso-600 mt-1">Anatomical fit satisfaction, repeat loyalty, and repair services.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-sand-200 text-[10px] font-bold text-espresso-500 uppercase tracking-wider flex items-center justify-between">
+                  <span>Inspect Relationship</span>
+                  <span>→</span>
+                </div>
+              </button>
+
+            </div>
+
+            <!-- Dynamic Flow Stage Detail Panel -->
+            <div id="flow-stage-panel" class="p-6 sm:p-8 rounded-2xl bg-sand-50 border border-sand-300">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-4 border-b border-sand-200 gap-2">
+                <div>
+                  <span id="flow-panel-subtitle" class="text-xs uppercase font-bold tracking-widest text-cork-700">Stage 01 • Origin</span>
+                  <h4 id="flow-panel-title" class="font-serif text-2xl font-bold text-espresso-900">Brand Source: 100% German Manufacturing</h4>
+                </div>
+                <span id="flow-panel-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase bg-cork-100 text-cork-800 w-max">
+                  Channel Control: Absolute
+                </span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-espresso-700 leading-relaxed mb-6">
+                <div>
+                  <strong class="text-espresso-900 block mb-1 font-serif text-sm">Strategic Role in Value Chain:</strong>
+                  <p id="flow-panel-role">
+                    Birkenstock controls 100% of its proprietary cork-latex footbed production within its state-of-the-art facilities in Görlitz, Bernstadt, and Pasewalk (Germany). Unlike competitors who outsource to low-cost Asian factories, keeping footbed formulation in Germany safeguards trade secrets and guarantees orthopedically sound consistency.
+                  </p>
+                </div>
+                <div>
+                  <strong class="text-espresso-900 block mb-1 font-serif text-sm">Marketing & Operational Implications:</strong>
+                  <p id="flow-panel-implications">
+                    Centralized production enforces strict allocation limits during high-demand viral spikes (e.g., the Boston clog surge), protecting brand scarcity. This prevents overproduction and eliminates pressure on retailers to dump inventory at discount prices.
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-sand-200 text-xs">
+                <div class="p-3 bg-white rounded-xl border border-sand-200">
+                  <strong class="text-cork-800 block mb-1 font-semibold">✓ Core Benefits:</strong>
+                  <span id="flow-panel-benefits">Uncompromising quality assurance, heritage authenticity, zero counterfeit risk at origin, and full protection of anatomical patents.</span>
+                </div>
+                <div class="p-3 bg-white rounded-xl border border-sand-200">
+                  <strong class="text-espresso-800 block mb-1 font-semibold">⚠ Limitations & Trade-offs:</strong>
+                  <span id="flow-panel-limitations">Higher European labor costs, longer international freight lead times, and capacity bottlenecks during sudden global viral demand shocks.</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Part B: Interactive World Heat & Presence Map (Section 7 Master Prompt Requirement) -->
+        <div id="world-map-container" class="bg-white rounded-3xl border border-sand-200 p-8 shadow-sm mb-16">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between pb-6 mb-8 border-b border-sand-200 gap-4">
+            <div>
+              <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-1">
+                <span class="w-2 h-2 rounded-full bg-cork-600 animate-pulse"></span>
+                <span>Geographic Footprint & Growth Opportunities</span>
+              </div>
+              <h3 class="font-serif text-3xl font-bold text-espresso-900">Interactive Global Distribution & Market Reach Map</h3>
+              <p class="text-xs sm:text-sm text-espresso-600 mt-1 max-w-2xl">
+                Visualizing confirmed corporate presence, established sales regions, and strategic growth opportunities grounded in official corporate filings.
+              </p>
+            </div>
+
+            <!-- Accuracy Notice & Disclaimer -->
+            <div class="text-right">
+              <span class="inline-block px-3 py-1.5 rounded-full bg-sand-100 border border-sand-300 text-[11px] font-semibold text-espresso-700">
+                *Qualitative presence model based on official Birkenstock NYSE filings. No fabricated country revenues.
+              </span>
+            </div>
+          </div>
+
+          <!-- Color-Coded Map Legend -->
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 p-4 rounded-2xl bg-sand-50 border border-sand-200 mb-6 text-xs">
+            <span class="text-espresso-800 font-bold uppercase tracking-wider text-[11px]">Map Legend:</span>
+            
+            <div class="flex items-center space-x-2">
+              <span class="w-3.5 h-3.5 rounded-sm bg-[#3b281f] border border-black/20"></span>
+              <span class="font-semibold text-espresso-900">Confirmed Core Heritage & Production</span>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+              <span class="w-3.5 h-3.5 rounded-sm bg-[#9c5c2d] border border-black/20"></span>
+              <span class="font-semibold text-espresso-900">High-Growth Established Markets</span>
+            </div>
+
+            <div class="flex items-center space-x-2">
+              <span class="w-3.5 h-3.5 rounded-sm bg-[#c9933b] border border-black/20"></span>
+              <span class="font-semibold text-espresso-900">Emerging Strategic Priority (India / GCC)</span>
+            </div>
+
+            <div class="flex items-center space-x-2">
+              <span class="w-3.5 h-3.5 rounded-sm bg-[#d9cbba] border border-black/20"></span>
+              <span class="font-semibold text-espresso-700">Developing / limited presence</span>
+            </div>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-sand-100 text-espresso-700 border border-sand-200">
+              Click a region to view revenue
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_18rem] gap-5 items-stretch mb-8">
+            <div class="rounded-2xl overflow-hidden border border-sand-200 bg-[#f7f1e8] p-3 sm:p-5">
+              <svg id="world-map-svg" class="w-full h-auto min-h-[270px]" viewBox="0 0 1000 470" role="img" aria-labelledby="world-map-title world-map-desc">
+                <title id="world-map-title">Interactive global revenue heat map</title>
+                <desc id="world-map-desc">Click North America, Europe, Asia-Pacific, Latin America, or Middle East and Africa to view the illustrative revenue detail.</desc>
+                <defs>
+                  <pattern id="map-grid" width="45" height="45" patternUnits="userSpaceOnUse">
+                    <path d="M 45 0 L 0 0 0 45" fill="none" stroke="#e5dacb" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="1000" height="470" rx="20" fill="url(#map-grid)"/>
+                <g id="world-map-countries" aria-label="World map countries"></g>
+                <g class="map-region" data-region="north-america" role="button" tabindex="0" aria-label="North America revenue">
+                  <path class="map-region-path" fill="#9c5c2d" stroke="#fff" stroke-width="3" d="M91 91L178 50 263 67 292 114 268 157 222 172 204 216 157 225 127 192 103 153Z"/>
+                  <path class="map-region-path" fill="#9c5c2d" stroke="#fff" stroke-width="3" d="M218 231L256 244 271 288 255 332 231 378 212 336 198 292Z"/>
+                  <text x="176" y="137" text-anchor="middle" class="map-label">NORTH AMERICA</text>
+                </g>
+                <g class="map-region" data-region="latin-america" role="button" tabindex="0" aria-label="Latin America revenue">
+                  <path class="map-region-path" fill="#c9933b" stroke="#fff" stroke-width="3" d="M284 249L340 260 367 305 352 358 319 414 298 376 304 332 273 294Z"/>
+                  <text x="325" y="300" text-anchor="middle" class="map-label">LATIN AMERICA</text>
+                </g>
+                <g class="map-region" data-region="europe" role="button" tabindex="0" aria-label="Europe revenue">
+                  <path class="map-region-path" fill="#3b281f" stroke="#fff" stroke-width="3" d="M449 87L514 76 563 99 554 131 504 143 463 125Z"/>
+                  <text x="504" y="112" text-anchor="middle" class="map-label">EUROPE</text>
+                </g>
+                <g class="map-region" data-region="middle-east-africa" role="button" tabindex="0" aria-label="Middle East and Africa revenue">
+                  <path class="map-region-path" fill="#c9933b" stroke="#fff" stroke-width="3" d="M491 155L558 149 587 201 566 280 523 333 488 283 472 218Z"/>
+                  <path class="map-region-path" fill="#c9933b" stroke="#fff" stroke-width="3" d="M573 152L625 153 652 180 612 203 574 190Z"/>
+                  <text x="535" y="220" text-anchor="middle" class="map-label">MEA</text>
+                </g>
+                <g class="map-region" data-region="asia-pacific" role="button" tabindex="0" aria-label="Asia Pacific revenue">
+                  <path class="map-region-path" fill="#9c5c2d" stroke="#fff" stroke-width="3" d="M589 84L715 60 821 88 886 133 843 179 756 172 691 207 627 180 601 137Z"/>
+                  <path class="map-region-path" fill="#9c5c2d" stroke="#fff" stroke-width="3" d="M793 255L846 268 870 311 829 333 784 303Z"/>
+                  <text x="746" y="130" text-anchor="middle" class="map-label">ASIA-PACIFIC</text>
+                </g>
+                <g fill="#6d462c" opacity=".65">
+                  <circle cx="492" cy="105" r="5"/><circle cx="187" cy="133" r="5"/><circle cx="694" cy="148" r="5"/><circle cx="568" cy="191" r="5"/>
+                </g>
+              </svg>
+            </div>
+            <aside id="revenue-detail-panel" class="rounded-2xl border border-cork-200 bg-cork-50 p-5 flex flex-col justify-between" aria-live="polite">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-cork-700">Revenue explorer</span>
+                <h4 class="font-serif text-2xl font-bold text-espresso-900 mt-2">Select a region</h4>
+                <p class="text-sm text-espresso-600 mt-2 leading-relaxed">Click a shaded region to reveal its revenue contribution and market position.</p>
+              </div>
+              <p class="text-[10px] leading-relaxed text-espresso-500 mt-5">Illustrative regional revenue model for presentation use; not reported company revenue.</p>
+            </aside>
+          </div>
+
+          <div class="rounded-2xl border border-sand-200 overflow-hidden mb-8">
+            <div class="p-5 bg-sand-50 border-b border-sand-200">
+              <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-cork-700">Competitive benchmark</span>
+                  <h4 class="font-serif text-2xl font-bold text-espresso-900 mt-1">Revenue, ROI & Turnover Comparison</h4>
+                </div>
+                <span class="text-[10px] text-espresso-500 max-w-sm">Illustrative index for strategic comparison; not audited company financials.</span>
+              </div>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[780px] text-left text-xs text-espresso-800">
+                <thead class="bg-white text-[10px] uppercase tracking-wider text-cork-800">
+                  <tr>
+                    <th class="px-4 py-3">Brand</th><th class="px-4 py-3">Global turnover index</th><th class="px-4 py-3">Revenue quality</th><th class="px-4 py-3">Indicative ROI</th><th class="px-4 py-3">Channel control</th><th class="px-4 py-3">Competitive read</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-sand-200 bg-white">
+                  <tr class="bg-cork-50/70"><td class="px-4 py-3 font-bold text-cork-900">Birkenstock</td><td class="px-4 py-3 font-mono">100</td><td class="px-4 py-3">Premium / repeat-led</td><td class="px-4 py-3 font-bold text-cork-800">High</td><td class="px-4 py-3">High</td><td class="px-4 py-3">Best mix of pricing power, longevity and brand heat.</td></tr>
+                  <tr><td class="px-4 py-3 font-semibold">Crocs</td><td class="px-4 py-3 font-mono">135</td><td class="px-4 py-3">Volume / accessible</td><td class="px-4 py-3">Medium–High</td><td class="px-4 py-3">Medium</td><td class="px-4 py-3">Larger scale; more exposed to promotion and trend cycles.</td></tr>
+                  <tr><td class="px-4 py-3 font-semibold">Dr. Martens</td><td class="px-4 py-3 font-mono">55</td><td class="px-4 py-3">Premium / fashion-led</td><td class="px-4 py-3">Medium</td><td class="px-4 py-3">Medium</td><td class="px-4 py-3">Strong cultural equity, but narrower category utility.</td></tr>
+                  <tr><td class="px-4 py-3 font-semibold">Skechers</td><td class="px-4 py-3 font-mono">180</td><td class="px-4 py-3">Volume / broad</td><td class="px-4 py-3">Medium</td><td class="px-4 py-3">Low–Medium</td><td class="px-4 py-3">Highest reach; less scarcity and lower luxury signalling.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-espresso-800 border-collapse">
+              <thead>
+                <tr class="border-b border-sand-300 bg-sand-50 text-[11px] uppercase tracking-wider text-cork-800 font-bold">
+                  <th class="py-3 px-4">Distribution Channel</th>
+                  <th class="py-3 px-4">Geographic Reach</th>
+                  <th class="py-3 px-4">Customer Convenience</th>
+                  <th class="py-3 px-4">Channel Control</th>
+                  <th class="py-3 px-4">Retail Experience</th>
+                  <th class="py-3 px-4">Key Advantage</th>
+                  <th class="py-3 px-4">Key Disadvantage / Risk</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-sand-200">
+                
+                <!-- Channel 1: Official DTC E-Commerce -->
+                <tr class="hover:bg-sand-50/50 transition-colors">
+                  <td class="py-4 px-4 font-semibold">
+                    <span class="font-serif text-sm font-bold text-espresso-900 block">Official DTC Online</span>
+                    <span class="text-[10px] text-cork-700 font-mono">Birkenstock.com / .in</span>
+                  </td>
+                  <td class="py-4 px-4">Global / Pan-India national shipping coverage</td>
+                  <td class="py-4 px-4">Highest (24/7 mobile checkout & doorstep delivery)</td>
+                  <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-cork-100 text-cork-800 font-bold text-[10px]">Total (100%)</span></td>
+                  <td class="py-4 px-4">High digital visual storytelling, sizing calculators</td>
+                  <td class="py-4 px-4 text-cork-900 font-medium">Full retail margin capture & zero-party customer data ownership.</td>
+                  <td class="py-4 px-4 text-espresso-500">Higher sizing return friction for new footbed buyers.</td>
+                </tr>
+
+                <!-- Channel 2: Owned Physical Flagships -->
+                <tr class="hover:bg-sand-50/50 transition-colors bg-cork-50/20">
+                  <td class="py-4 px-4 font-semibold">
+                    <span class="font-serif text-sm font-bold text-espresso-900 block">Physical Flagship Stores</span>
+                    <span class="text-[10px] text-cork-700 font-mono">Sensory Cultural Hubs</span>
+                  </td>
+                  <td class="py-4 px-4">Targeted (Prime metro luxury high streets)</td>
+                  <td class="py-4 px-4">Moderate (Requires physical store visit)</td>
+                  <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-cork-100 text-cork-800 font-bold text-[10px]">Total (100%)</span></td>
+                  <td class="py-4 px-4">Unmatched (Raw cork walls, live fitting specialists)</td>
+                  <td class="py-4 px-4 text-cork-900 font-medium">Deep brand immersion, immediate tactile fit validation, and cobbler care.</td>
+                  <td class="py-4 px-4 text-espresso-500">High prime-retail lease capex and operating overhead.</td>
+                </tr>
+
+                <!-- Channel 3: Premium Footwear Retailers -->
+                <tr class="hover:bg-sand-50/50 transition-colors">
+                  <td class="py-4 px-4 font-semibold">
+                    <span class="font-serif text-sm font-bold text-espresso-900 block">Premium Retail Partners</span>
+                    <span class="text-[10px] text-cork-700 font-mono">Nordstrom, Selfridges, REI</span>
+                  </td>
+                  <td class="py-4 px-4">High (Broad international retail footprint)</td>
+                  <td class="py-4 px-4">High (One-stop shopping with apparel)</td>
+                  <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-sand-200 text-espresso-700 font-semibold text-[10px]">Moderate</span></td>
+                  <td class="py-4 px-4">Good (Subject to department store visual standards)</td>
+                  <td class="py-4 px-4 text-cork-900 font-medium">Mass customer discovery and strong luxury brand adjacency.</td>
+                  <td class="py-4 px-4 text-espresso-500">Wholesale margin haircut (~50%) and competing shelf space.</td>
+                </tr>
+
+                <!-- Channel 4: Online Luxury Marketplaces -->
+                <tr class="hover:bg-sand-50/50 transition-colors">
+                  <td class="py-4 px-4 font-semibold">
+                    <span class="font-serif text-sm font-bold text-espresso-900 block">Authorized Marketplaces</span>
+                    <span class="text-[10px] text-cork-700 font-mono">Tata CLiQ Luxury, Zappos</span>
+                  </td>
+                  <td class="py-4 px-4">Broad (Reaches Tier-2 & Tier-3 digital consumers)</td>
+                  <td class="py-4 px-4">Very High (Fast app-based ordering & returns)</td>
+                  <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-sand-200 text-espresso-700 font-semibold text-[10px]">Controlled</span></td>
+                  <td class="py-4 px-4">Moderate (Platform-templated UI)</td>
+                  <td class="py-4 px-4 text-cork-900 font-medium">Captures regional demand without localized marketing spend.</td>
+                  <td class="py-4 px-4 text-espresso-500">Risk of platform discounting pressure; partner commissions.</td>
+                </tr>
+
+                <!-- Channel 5: Mass Discount Channels (Banned) -->
+                <tr class="hover:bg-sand-50/50 transition-colors bg-red-50/20">
+                  <td class="py-4 px-4 font-semibold">
+                    <span class="font-serif text-sm font-bold text-red-900 block">Mass Discount Wholesale</span>
+                    <span class="text-[10px] text-red-700 font-mono">Amazon Open Marketplace, Off-Price</span>
+                  </td>
+                  <td class="py-4 px-4">Mass (Uncontrolled)</td>
+                  <td class="py-4 px-4">High</td>
+                  <td class="py-4 px-4"><span class="px-2 py-0.5 rounded bg-red-100 text-red-800 font-bold text-[10px]">Extremely Low (Severed)</span></td>
+                  <td class="py-4 px-4">Poor (Commodity grid, price-war UI)</td>
+                  <td class="py-4 px-4 text-espresso-500">High short-term transaction volume.</td>
+                  <td class="py-4 px-4 text-red-800 font-medium">Severely dilutes premium prestige, encourages counterfeits, destroys MAP.</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Case study removed per presentation flow -->
+        <div class="hidden">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between pb-6 mb-8 border-b border-espresso-800 gap-4">
+            <div>
+              <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-400 font-bold mb-1">
+                <span>MBA Channel Strategy Case Study</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+                The 2016 Amazon Exit: Protecting Brand Equity at Any Cost
+              </h3>
+              <p class="text-xs sm:text-sm text-sand-300 mt-1 max-w-2xl">
+                Why former CEO Oliver Reichert terminated direct wholesale relationships with the world's largest marketplace.
+              </p>
+            </div>
+            <span class="px-3 py-1.5 rounded-lg bg-cork-700 text-sand-50 font-mono text-xs font-bold uppercase w-max">
+              Channel Courage Case
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-sand-200 leading-relaxed mb-6">
+            
+            <div class="bg-espresso-800/90 p-5 rounded-2xl border border-espresso-700">
+              <span class="text-cork-300 font-bold text-xs uppercase tracking-wider block mb-2">01. The Counterfeit Threat</span>
+              <p>
+                Open third-party marketplaces allowed unauthorized grey-market sellers to sell cheap foam knockoffs and unauthorized parallel imports under Birkenstock listings, confusing consumers and damaging the brand's podiatric reputation.
+              </p>
+            </div>
+
+            <div class="bg-espresso-800/90 p-5 rounded-2xl border border-espresso-700">
+              <span class="text-cork-300 font-bold text-xs uppercase tracking-wider block mb-2">02. Destruction of Price Floors</span>
+              <p>
+                Algorithmic price undercutting by unauthorized vendors breached Minimum Advertised Price (MAP) standards, forcing authorized independent shoemakers and luxury department stores to demand discount concessions.
+              </p>
+            </div>
+
+            <div class="bg-espresso-800/90 p-5 rounded-2xl border border-espresso-700">
+              <span class="text-cork-300 font-bold text-xs uppercase tracking-wider block mb-2">03. The Bold Resolution</span>
+              <p>
+                Birkenstock severed all direct shipments to Amazon USA in 2016 and Amazon Europe in 2018. Rather than suffering revenue loss, Birkenstock drove consumers directly to Birkenstock.com, creating a cleaner customer database and higher profit margins.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="p-4 rounded-xl bg-espresso-800 border border-espresso-700 text-xs text-sand-300 flex items-center justify-between">
+            <span><strong>MBA Strategic Takeaway:</strong> True luxury and premium brands do not chase distribution volume at the expense of channel control. Scarcity and pricing discipline create enduring enterprise valuation.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- ========================================== -->
+    <!-- 5. PROMOTION SECTION (#promotion)          -->
+    <!-- ========================================== -->
+    <section id="promotion" class="presentation-section relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 border-b border-sand-200 bg-sand-50">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-sand-200">
+          <div>
+            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-2">
+              <span class="px-2 py-0.5 rounded bg-cork-200 text-cork-800">The 4th P</span>
+              <span>• Operational Marketing Mix</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-espresso-900">Promotion Strategy</h2>
+            <p class="text-base text-espresso-600 mt-2 max-w-2xl">
+              From anti-advertising subculture to organic lifestyle storytelling, user-generated content, and our student concept campaign.
+            </p>
+          </div>
+          
+          <div class="mt-4 md:mt-0 flex items-center space-x-3">
+            <a href="#home" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full border border-sand-300 text-xs font-semibold uppercase tracking-wider text-espresso-700 hover:bg-sand-200 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              <span>Back to Home</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Four Promotional Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          
+          <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-sand-100 flex items-center justify-center text-cork-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-espresso-900 mb-2">Anti-Advertising Heritage</h3>
+            <p class="text-xs text-espresso-600 leading-relaxed">
+              For decades, Birkenstock rejected conventional paid celebrity promotions. The brand let authentic, unprompted adoption by chefs, hospital workers, and artists build unassailable street credibility.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-sand-100 flex items-center justify-center text-cork-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-espresso-900 mb-2">Lifestyle Storytelling</h3>
+            <p class="text-xs text-espresso-600 leading-relaxed">
+              Focuses on documentary editorial narratives such as the "Ugly for a Reason" series, celebrating foot biomechanics and the human anatomy rather than superficial seasonal fashion trends.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-sand-100 flex items-center justify-center text-cork-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-espresso-900 mb-2">Organic UGC & Social Culture</h3>
+            <p class="text-xs text-espresso-600 leading-relaxed">
+              Thriving user-generated content across TikTok and Instagram. Enthusiasts share styling hacks (chunky knit socks with Boston clogs), personalized leather aging, and multi-year wear diaries.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-sand-100 flex items-center justify-center text-cork-700 mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-espresso-900 mb-2">High-Fashion Collateral</h3>
+            <p class="text-xs text-espresso-600 leading-relaxed">
+              Selected prestige capsule collaborations with haute-couture fashion houses create organic media headlines, cementing Birkenstock as an icon of effortless, unpretentious luxury.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Part B: Proposed Student Campaign: "Walk Your Own Path" -->
+        <div class="bg-white rounded-3xl border-2 border-cork-500/80 p-8 sm:p-10 shadow-lg">
+          
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-sand-200">
+            <div>
+              <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cork-100 text-cork-800 text-[10px] uppercase font-bold tracking-widest mb-2">
+                <span>Proposed Student Academic Concept</span>
+              </div>
+              <h3 class="font-serif text-3xl font-bold text-espresso-900">Campaign: “Walk Your Own Path”</h3>
+              <p class="text-sm text-espresso-600 mt-1">
+                A conceptual multi-channel campaign celebrating non-conformity, anatomical truth, and individual cadence.
+              </p>
+            </div>
+            
+            <div class="mt-4 sm:mt-0 text-left sm:text-right">
+              <span class="inline-block px-3 py-1.5 rounded-lg bg-sand-100 text-[11px] font-semibold text-espresso-600 border border-sand-300">
+                Notice: Proposed Academic Strategy, Not Official Brand Campaign
+              </span>
+            </div>
+          </div>
+
+          <!-- Campaign Strategic Thesis -->
+          <div class="mb-10 bg-sand-50 p-6 rounded-2xl border border-sand-200 text-sm text-espresso-700 leading-relaxed">
+            <strong class="text-cork-800 font-serif text-base block mb-1">Campaign Narrative:</strong>
+            "In a world accelerating into disposable trends and synthetic uniformity, true luxury is honoring your natural stride. 'Walk Your Own Path' highlights that your footprint is as unique as your fingerprint. Birkenstock molds to you — you never mold to it."
+          </div>
+
+          <!-- Three-Frame Campaign Storyboard -->
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <h4 class="font-serif text-xl font-bold text-espresso-900">Three-Frame Campaign Storyboard</h4>
+              <span class="text-xs uppercase tracking-wider text-cork-700 font-semibold">Narrative Progression</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              
+              <!-- Frame 1 -->
+              <div class="storyboard-frame bg-sand-50 rounded-2xl border border-sand-300 overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-56 bg-gradient-to-br from-espresso-800 to-espresso-900 p-6 flex flex-col justify-between text-sand-50">
+                  <span class="px-2.5 py-1 rounded bg-cork-600/90 text-[10px] font-bold uppercase tracking-wider w-max">Frame 01 • The Architect's Studio</span>
+                  <div>
+                    <span class="text-xs uppercase tracking-widest text-cork-300 font-semibold">Visual Concept</span>
+                    <h5 class="font-serif text-xl font-bold text-white mt-1">The Morning Cadence</h5>
+                  </div>
+                  <div class="text-[11px] text-sand-300 italic">"Pave your route through concrete and noise."</div>
+                </div>
+                <div class="p-5">
+                  <h6 class="font-serif text-base font-bold text-espresso-900 mb-1">Scene Description:</h6>
+                  <p class="text-xs text-espresso-600 leading-relaxed mb-3">
+                    A designer steps across a sunlit architectural studio floor in taupe Boston clogs. Sound design captures the crisp, confident tap of cork and rubber against natural stone.
+                  </p>
+                  <div class="text-[11px] font-semibold text-cork-800 pt-2 border-t border-sand-200">
+                    Core Message: Unapologetic individual creative focus.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 2 -->
+              <div class="storyboard-frame bg-sand-50 rounded-2xl border border-sand-300 overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-56 bg-gradient-to-br from-cork-700 to-cork-900 p-6 flex flex-col justify-between text-sand-50">
+                  <span class="px-2.5 py-1 rounded bg-sand-50 text-cork-900 text-[10px] font-bold uppercase tracking-wider w-max">Frame 02 • The Natural Horizon</span>
+                  <div>
+                    <span class="text-xs uppercase tracking-widest text-sand-200 font-semibold">Visual Concept</span>
+                    <h5 class="font-serif text-xl font-bold text-white mt-1">Grounding The Body</h5>
+                  </div>
+                  <div class="text-[11px] text-sand-200 italic">"Rooted in oak, cork, and earth."</div>
+                </div>
+                <div class="p-5">
+                  <h6 class="font-serif text-base font-bold text-espresso-900 mb-1">Scene Description:</h6>
+                  <p class="text-xs text-espresso-600 leading-relaxed mb-3">
+                    A slow-motion close-up of Arizona sandals stepping from urban pavement onto a sun-warmed coastal pine trail. The cork footbed flexes naturally with every foot articulation.
+                  </p>
+                  <div class="text-[11px] font-semibold text-cork-800 pt-2 border-t border-sand-200">
+                    Core Message: Organic harmony with biomechanical nature.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 3 -->
+              <div class="storyboard-frame bg-sand-50 rounded-2xl border border-sand-300 overflow-hidden flex flex-col justify-between group">
+                <div class="relative h-56 bg-gradient-to-br from-sand-300 to-cork-600 p-6 flex flex-col justify-between text-espresso-900">
+                  <span class="px-2.5 py-1 rounded bg-espresso-900 text-sand-50 text-[10px] font-bold uppercase tracking-wider w-max">Frame 03 • Living Patina</span>
+                  <div>
+                    <span class="text-xs uppercase tracking-widest text-cork-900 font-semibold">Visual Concept</span>
+                    <h5 class="font-serif text-xl font-bold text-espresso-900 mt-1">Character Carved by Miles</h5>
+                  </div>
+                  <div class="text-[11px] text-espresso-800 italic">"Your footprint, not a temporary trend."</div>
+                </div>
+                <div class="p-5">
+                  <h6 class="font-serif text-base font-bold text-espresso-900 mb-1">Scene Description:</h6>
+                  <p class="text-xs text-espresso-600 leading-relaxed mb-3">
+                    Side-by-side macro shot of a fresh new footbed alongside a 6-year-old personalized footbed with deep burnished leather patina. Tagline fades in: "The Art of Walking Different."
+                  </p>
+                  <div class="text-[11px] font-semibold text-cork-800 pt-2 border-t border-sand-200">
+                    Core Message: Enduring emotional and physical attachment.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- 6. STP SECTION (#stp)                      -->
+    <!-- (Strictly placed AFTER all 4 Ps!)          -->
+    <!-- ========================================== -->
+    <section id="stp" class="presentation-section relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 border-b border-sand-200 bg-sand-100/50">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-sand-200">
+          <div>
+            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-700 font-bold mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-cork-700 text-sand-50">STP Framework</span>
+              <span>• Strategic Market Architecture (Presented Post-4Ps)</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-espresso-900">Segmentation, Targeting & Positioning</h2>
+            <p class="text-base text-espresso-600 mt-2 max-w-2xl">
+              Evaluating how Birkenstock segments global demand, targets complementary archetypes, and establishes its unique perceptual positioning.
+            </p>
+          </div>
+          
+          <div class="mt-4 md:mt-0 flex items-center space-x-3">
+            <a href="#home" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full border border-sand-300 text-xs font-semibold uppercase tracking-wider text-espresso-700 hover:bg-sand-200 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              <span>Back to Home</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Tabs for the Three STP Components -->
+        <div class="mb-12">
+          
+          <div class="flex flex-wrap border-b border-sand-300 space-x-2 sm:space-x-4 mb-8">
+            <button class="stp-tab-btn py-3.5 px-6 font-serif text-lg font-bold transition-all border-b-2 border-cork-600 text-cork-700 active-tab focus:outline-none" data-tab="segmentation">
+              1. Market Segmentation
+            </button>
+            <button class="stp-tab-btn py-3.5 px-6 font-serif text-lg font-bold transition-all border-b-2 border-transparent text-espresso-500 hover:text-espresso-800 focus:outline-none" data-tab="targeting">
+              2. Target Personas
+            </button>
+            <button class="stp-tab-btn py-3.5 px-6 font-serif text-lg font-bold transition-all border-b-2 border-transparent text-espresso-500 hover:text-espresso-800 focus:outline-none" data-tab="positioning">
+              3. Strategic Positioning & Perceptual Map
+            </button>
+          </div>
+
+          <!-- TAB CONTENT 1: SEGMENTATION -->
+          <div id="stp-tab-segmentation" class="stp-tab-pane">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              
+              <!-- Demographic -->
+              <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+                <div class="w-10 h-10 rounded-lg bg-cork-100 flex items-center justify-center text-cork-700 mb-4 font-bold text-sm">
+                  DEM
+                </div>
+                <h4 class="font-serif text-xl font-bold text-espresso-900 mb-2">Demographic</h4>
+                <ul class="text-xs text-espresso-600 space-y-2.5">
+                  <li><strong>Age Span:</strong> Broad multi-generational appeal (Ages 18 to 70+).</li>
+                  <li><strong>Income:</strong> Middle to Upper-Middle disposable income bracket.</li>
+                  <li><strong>Professions:</strong> Healthcare workers, chefs, teachers, architects, designers, students who stand or walk extensively.</li>
+                  <li><strong>Gender:</strong> Balanced gender profile with high unisex styling crossover.</li>
+                </ul>
+              </div>
+
+              <!-- Geographic -->
+              <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+                <div class="w-10 h-10 rounded-lg bg-cork-100 flex items-center justify-center text-cork-700 mb-4 font-bold text-sm">
+                  GEO
+                </div>
+                <h4 class="font-serif text-xl font-bold text-espresso-900 mb-2">Geographic</h4>
+                <ul class="text-xs text-espresso-600 space-y-2.5">
+                  <li><strong>Core Markets:</strong> Germany & Western Europe, United States, Japan.</li>
+                  <li><strong>Growth Horizons:</strong> China, India, Southeast Asia, Latin America.</li>
+                  <li><strong>Urban Environments:</strong> High-density, pedestrian-forward metropolitan cities.</li>
+                  <li><strong>Climate Adaptability:</strong> Warm summer coastal sandals + cold season Boston mules with wool socks.</li>
+                </ul>
+              </div>
+
+              <!-- Psychographic -->
+              <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+                <div class="w-10 h-10 rounded-lg bg-cork-100 flex items-center justify-center text-cork-700 mb-4 font-bold text-sm">
+                  PSY
+                </div>
+                <h4 class="font-serif text-xl font-bold text-espresso-900 mb-2">Psychographic</h4>
+                <ul class="text-xs text-espresso-600 space-y-2.5">
+                  <li><strong>Values:</strong> Health consciousness, biomechanical wellness, authentic craft.</li>
+                  <li><strong>Mindset:</strong> Anti-trend, conscious minimalism, "Ugly-Chic" self-assurance.</li>
+                  <li><strong>Sustainability:</strong> Appreciates natural renewable cork, jute, and repairability.</li>
+                  <li><strong>Status Perception:</strong> Subtle, understated luxury over ostentatious logos.</li>
+                </ul>
+              </div>
+
+              <!-- Behavioural -->
+              <div class="bg-white p-6 rounded-2xl border border-sand-200 shadow-sm">
+                <div class="w-10 h-10 rounded-lg bg-cork-100 flex items-center justify-center text-cork-700 mb-4 font-bold text-sm">
+                  BEH
+                </div>
+                <h4 class="font-serif text-xl font-bold text-espresso-900 mb-2">Behavioural</h4>
+                <ul class="text-xs text-espresso-600 space-y-2.5">
+                  <li><strong>Usage Intensity:</strong> Heavy daily utility across multiple seasons.</li>
+                  <li><strong>Brand Loyalty:</strong> Exceptionally high repeat purchase rate (collectors own 3+ pairs).</li>
+                  <li><strong>Purchase Trigger:</strong> Preventive ergonomic health, lifestyle upgrade, or iconic style staple.</li>
+                  <li><strong>Advocacy:</strong> Vocal word-of-mouth evangelism among friends and colleagues.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- TAB CONTENT 2: TARGETING -->
+          <div id="stp-tab-targeting" class="stp-tab-pane hidden">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              
+              <!-- Persona 1 -->
+              <div class="bg-white rounded-2xl p-7 border border-sand-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-cork-100 text-cork-800">Persona 1</span>
+                    <span class="text-xs text-espresso-400 font-semibold">Ergonomics First</span>
+                  </div>
+                  <h4 class="font-serif text-2xl font-bold text-espresso-900 mb-2">The Wellness & Comfort Seeker</h4>
+                  <p class="text-xs text-espresso-600 leading-relaxed mb-4">
+                    Prioritizes orthopedic support, joint relief, and anatomical health. Includes culinary chefs, nurses, educators, and active adults who refuse to sacrifice their back and knees for aesthetic vanity.
+                  </p>
+                  <div class="space-y-2 text-xs text-espresso-700 bg-sand-50 p-4 rounded-xl border border-sand-200/60 mb-4">
+                    <div><strong>Why They Appeal:</strong> Reliable year-round revenue baseline; zero price sensitivity when foot pain is eliminated.</div>
+                    <div><strong>Favored Models:</strong> Classic Arizona with Soft Footbed, Super-Grip professional clogs.</div>
+                  </div>
+                </div>
+                <div class="text-[11px] text-cork-700 font-bold border-t border-sand-100 pt-3">
+                  Brand Value: The authentic heritage backbone of the company.
+                </div>
+              </div>
+
+              <!-- Persona 2 -->
+              <div class="bg-white rounded-2xl p-7 border-2 border-cork-500/80 shadow-md flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-cork-600 text-white">Persona 2</span>
+                    <span class="text-xs text-cork-700 font-semibold">Streetwear & Style</span>
+                  </div>
+                  <h4 class="font-serif text-2xl font-bold text-espresso-900 mb-2">The Contemporary Style Curator</h4>
+                  <p class="text-xs text-espresso-600 leading-relaxed mb-4">
+                    Urban trendsetters, creative directors, college students, and fashion enthusiasts who embrace "normcore", effortless luxury, and the raw utilitarian silhouette as an anti-fast-fashion badge of honor.
+                  </p>
+                  <div class="space-y-2 text-xs text-espresso-700 bg-sand-50 p-4 rounded-xl border border-sand-200/60 mb-4">
+                    <div><strong>Why They Appeal:</strong> Drives massive organic social virality, seasonal sellouts, and cultural relevance.</div>
+                    <div><strong>Favored Models:</strong> Taupe Suede Boston Clogs, 1774 luxury collaborations, Shearling Arizona.</div>
+                  </div>
+                </div>
+                <div class="text-[11px] text-cork-700 font-bold border-t border-sand-100 pt-3">
+                  Brand Value: Generates massive earned media and global youth cachet.
+                </div>
+              </div>
+
+              <!-- Persona 3 -->
+              <div class="bg-white rounded-2xl p-7 border border-sand-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-sand-200 text-espresso-800">Persona 3</span>
+                    <span class="text-xs text-espresso-400 font-semibold">Sustainability</span>
+                  </div>
+                  <h4 class="font-serif text-2xl font-bold text-espresso-900 mb-2">The Conscious Minimalist</h4>
+                  <p class="text-xs text-espresso-600 leading-relaxed mb-4">
+                    Values longevity, renewable circular materials, and repairability. They believe in buying fewer, higher quality goods that last half a decade rather than cycling through plastic footwear.
+                  </p>
+                  <div class="space-y-2 text-xs text-espresso-700 bg-sand-50 p-4 rounded-xl border border-sand-200/60 mb-4">
+                    <div><strong>Why They Appeal:</strong> High lifetime customer value; active participants in brand resoling and circular care services.</div>
+                    <div><strong>Favored Models:</strong> Oiled leather Arizona and Gizeh sandals in raw earth tones.</div>
+                  </div>
+                </div>
+                <div class="text-[11px] text-cork-700 font-bold border-t border-sand-100 pt-3">
+                  Brand Value: Reinforces Birkenstock's ESG credentials and credibility.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- TAB CONTENT 3: POSITIONING & PERCEPTUAL MAP -->
+          <div id="stp-tab-positioning" class="stp-tab-pane hidden">
+            
+            <div class="bg-white rounded-3xl border border-sand-200 p-8 shadow-sm mb-8">
+              <div class="max-w-3xl mb-8">
+                <span class="text-xs uppercase font-bold tracking-widest text-cork-700">Brand Positioning Statement</span>
+                <h4 class="font-serif text-3xl font-bold text-espresso-900 mt-1">Form Follows Function, Elevated to Understated Luxury</h4>
+                <p class="text-sm text-espresso-600 mt-2 leading-relaxed">
+                  Birkenstock occupies a singularly defensible position in global footwear: uncompromising orthopedic foot health transformed into an effortless, timeless design icon.
+                </p>
+              </div>
+
+              <!-- Interactive Conceptual Perceptual Map -->
+              <div class="border-t border-sand-200 pt-8">
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
+                  <div>
+                    <h5 class="font-serif text-2xl font-bold text-espresso-900">Conceptual Perceptual Map</h5>
+                    <p class="text-xs text-espresso-500">Comparing Comfort (Anatomical Support) vs. Fashion / Style Prestige</p>
+                  </div>
+                  <div class="mt-2 sm:mt-0">
+                    <span class="inline-block px-3 py-1 rounded bg-sand-100 text-[10px] uppercase font-bold text-cork-800 border border-sand-300">
+                      *Illustrative Conceptual Model — Academic Comparison
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Perceptual Map Canvas Grid -->
+                <div class="relative bg-sand-50 rounded-2xl border-2 border-sand-200 p-8 h-[460px] flex items-center justify-center overflow-hidden">
+                  
+                  <!-- Axes Lines -->
+                  <div class="absolute inset-y-8 left-1/2 w-0.5 bg-sand-300 transform -translate-x-1/2"></div>
+                  <div class="absolute inset-x-8 top-1/2 h-0.5 bg-sand-300 transform -translate-y-1/2"></div>
+
+                  <!-- Axis Labels -->
+                  <div class="absolute top-3 left-1/2 transform -translate-x-1/2 text-xs font-bold uppercase tracking-widest text-cork-800 bg-sand-100/90 px-3 py-0.5 rounded shadow-sm">
+                    ▲ High Orthopedic Comfort
+                  </div>
+                  <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-xs font-bold uppercase tracking-widest text-espresso-400 bg-sand-100/90 px-3 py-0.5 rounded">
+                    ▼ Low Comfort (Pure Aesthetic)
+                  </div>
+                  <div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-xs font-bold uppercase tracking-widest text-cork-800 bg-sand-100/90 px-3 py-0.5 rounded shadow-sm">
+                    High Fashion & Prestige ▶
+                  </div>
+                  <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-xs font-bold uppercase tracking-widest text-espresso-400 bg-sand-100/90 px-3 py-0.5 rounded">
+                    ◀ Pure Functional Utility
+                  </div>
+
+                  <!-- PLOTTED BRAND CLUSTERS -->
+
+                  <!-- Cluster 1: BIRKENSTOCK (Top Right / Distinct Sweet Spot) -->
+                  <div class="map-node absolute top-[16%] right-[22%] group cursor-pointer">
+                    <div class="relative flex items-center justify-center">
+                      <div class="w-12 h-12 rounded-full bg-cork-600 text-white flex items-center justify-center font-bold text-xs shadow-xl ring-4 ring-cork-300 animate-pulse">
+                        BIRK
+                      </div>
+                      <div class="absolute left-14 whitespace-nowrap bg-espresso-900 text-sand-50 px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg border border-sand-300">
+                        BIRKENSTOCK
+                        <span class="block text-[9px] text-cork-300 font-normal">High Comfort + High Distinct Chic</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cluster 2: Traditional Orthopedic Medical Shoes (Top Left) -->
+                  <div class="map-node absolute top-[18%] left-[16%] group cursor-pointer opacity-80 hover:opacity-100">
+                    <div class="relative flex items-center">
+                      <div class="w-8 h-8 rounded-full bg-sand-300 text-espresso-800 flex items-center justify-center font-bold text-[10px]">
+                        MED
+                      </div>
+                      <div class="ml-2.5 whitespace-nowrap bg-white text-espresso-800 px-2.5 py-1 rounded text-[11px] border border-sand-300 shadow-sm">
+                        Standard Orthopedic Shoes
+                        <span class="block text-[8px] text-espresso-400">High Comfort, Low Fashion Cachet</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cluster 3: Fast Fashion Foam Slides (Bottom Left) -->
+                  <div class="map-node absolute bottom-[22%] left-[18%] group cursor-pointer opacity-80 hover:opacity-100">
+                    <div class="relative flex items-center">
+                      <div class="w-8 h-8 rounded-full bg-sand-300 text-espresso-800 flex items-center justify-center font-bold text-[10px]">
+                        MASS
+                      </div>
+                      <div class="ml-2.5 whitespace-nowrap bg-white text-espresso-800 px-2.5 py-1 rounded text-[11px] border border-sand-300 shadow-sm">
+                        Fast Fashion Plastic Slides
+                        <span class="block text-[8px] text-espresso-400">Low Comfort, Low Prestige</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cluster 4: Luxury Designer Stilettos & Loafers (Bottom Right) -->
+                  <div class="map-node absolute bottom-[18%] right-[16%] group cursor-pointer opacity-80 hover:opacity-100">
+                    <div class="relative flex items-center">
+                      <div class="w-8 h-8 rounded-full bg-sand-300 text-espresso-800 flex items-center justify-center font-bold text-[10px]">
+                        LUX
+                      </div>
+                      <div class="ml-2.5 whitespace-nowrap bg-white text-espresso-800 px-2.5 py-1 rounded text-[11px] border border-sand-300 shadow-sm">
+                        High Fashion Stilettos
+                        <span class="block text-[8px] text-espresso-400">Low Comfort, High Runway Glamour</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cluster 5: Athletic Lifestyle Sneakers (Center Right) -->
+                  <div class="map-node absolute top-[44%] right-[36%] group cursor-pointer opacity-80 hover:opacity-100">
+                    <div class="relative flex items-center">
+                      <div class="w-8 h-8 rounded-full bg-sand-300 text-espresso-800 flex items-center justify-center font-bold text-[10px]">
+                        SNKR
+                      </div>
+                      <div class="ml-2.5 whitespace-nowrap bg-white text-espresso-800 px-2.5 py-1 rounded text-[11px] border border-sand-300 shadow-sm">
+                        Lifestyle Sneakers
+                        <span class="block text-[8px] text-espresso-400">Moderate Comfort, High Sportstyle</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Strategic Takeaway Box -->
+                <div class="mt-6 p-4 rounded-xl bg-sand-100/70 border border-sand-200 text-xs text-espresso-700">
+                  <strong>Strategic Insight:</strong> Birkenstock owns the rare upper-right quadrant. While luxury footwear brands often sacrifice ergonomics for beauty, and medical shoes sacrifice aesthetics for podiatry, Birkenstock fuses anatomical purity into a globally revered lifestyle status symbol.
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- STP CLOSING VIDEO                          -->
+    <!-- ========================================== -->
+    <section id="stp-closing-video" class="presentation-section relative py-24 px-4 sm:px-6 lg:px-8 bg-espresso-900 text-sand-50">
+      <div class="max-w-7xl mx-auto w-full">
+        <div class="max-w-3xl mb-8">
+          <span class="text-xs uppercase tracking-widest text-cork-300 font-bold">After STP • Brand Film</span>
+          <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2">The Art of Walking Different</h2>
+          <p class="text-sand-300 mt-3">A closing visual for the brand story.</p>
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-espresso-700 shadow-2xl bg-black">
+          <video class="w-full max-h-[70vh] object-contain" controls playsinline preload="metadata" poster="assets/images/hero-arizona.jpg" aria-label="Birkenstock closing brand film">
+            <source src="assets/stp-closing-video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion removed per requested presentation flow -->
+    <section id="conclusion" class="hidden">
+      <div class="max-w-7xl mx-auto w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-espresso-700">
+          <div>
+            <div class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-cork-300 font-bold mb-2">
+              <span class="px-2 py-0.5 rounded bg-cork-600 text-white">Final Synthesis</span>
+              <span>• Strategic Horizon</span>
+            </div>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white">Conclusion & Strategic Insights</h2>
+            <p class="text-base text-sand-300 mt-2 max-w-2xl">
+              Key takeaways connecting the 4 Ps operational engine with long-term STP market dominance, followed by four actionable strategic recommendations.
+            </p>
+          </div>
+          
+          <div class="mt-4 md:mt-0 flex items-center space-x-3">
+            <a href="#home" class="inline-flex items-center space-x-1.5 px-4 py-2 rounded-full border border-espresso-700 text-xs font-semibold uppercase tracking-wider text-sand-200 hover:bg-espresso-800 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              <span>Back to Home</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Four Key Synthesis Takeaways -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          
+          <div class="bg-espresso-800/80 p-8 rounded-2xl border border-espresso-700">
+            <span class="text-xs uppercase font-bold tracking-widest text-cork-400">Synthesis 01</span>
+            <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">The Unreplicable Product Moat</h3>
+            <p class="text-sm text-sand-300 leading-relaxed">
+              The proprietary cork-latex footbed is not easily duplicated by fast-fashion mimics. Its complex European manufacturing process, orthopedic legacy, and 250 years of German craftsmanship create an authentic moat that protects Birkenstock from commoditization.
+            </p>
+          </div>
+
+          <div class="bg-espresso-800/80 p-8 rounded-2xl border border-espresso-700">
+            <span class="text-xs uppercase font-bold tracking-widest text-cork-400">Synthesis 02</span>
+            <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Pricing Power Via Cost-Per-Wear</h3>
+            <p class="text-sm text-sand-300 leading-relaxed">
+              Premium pricing remains resilient because the perceived value of multi-year orthopedic support dramatically outshines low-cost disposable sandals. Durability, resoling capability, and natural leather patina convert one-time buyers into lifelong brand evangelists.
+            </p>
+          </div>
+
+          <div class="bg-espresso-800/80 p-8 rounded-2xl border border-espresso-700">
+            <span class="text-xs uppercase font-bold tracking-widest text-cork-400">Synthesis 03</span>
+            <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Channel Discipline Safeguards Equity</h3>
+            <p class="text-sm text-sand-300 leading-relaxed">
+              By strictly rationing wholesale access and terminating discount marketplace relationships, Birkenstock avoided the discounting trap that damaged other legacy footwear brands. DTC e-commerce expansion simultaneously elevates profit margins and customer data ownership.
+            </p>
+          </div>
+
+          <div class="bg-espresso-800/80 p-8 rounded-2xl border border-espresso-700">
+            <span class="text-xs uppercase font-bold tracking-widest text-cork-400">Synthesis 04</span>
+            <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">Dual STP Harmony Without Brand Dilution</h3>
+            <p class="text-sm text-sand-300 leading-relaxed">
+              Birkenstock brilliantly bridges functional healthcare workers and high-fashion runway stylists without alienating either group. The brand's refusal to artificially beautify its silhouettes allows its functional authenticity to serve as its ultimate luxury badge.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Actionable Marketing Recommendations -->
+        <div class="bg-espresso-800 p-8 sm:p-10 rounded-3xl border border-espresso-700 mb-12">
+          <div class="mb-8">
+            <span class="text-xs uppercase font-bold tracking-widest text-brass-400">Strategic Horizon</span>
+            <h3 class="font-serif text-3xl font-bold text-white mt-1">Four Marketing Recommendations for Sustainable Growth</h3>
+            <p class="text-sm text-sand-300 mt-2">
+              Actionable strategic priorities to scale brand equity while safeguarding orthopedic integrity.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-espresso-900/60 p-5 rounded-xl border border-espresso-700/80">
+              <span class="text-xs font-bold text-cork-400">01. Global Resole Network</span>
+              <h4 class="font-serif text-lg font-bold text-white mt-1 mb-2">Scale Circularity</h4>
+              <p class="text-xs text-sand-300 leading-relaxed">
+                Establish direct-mail digital refurbishment hubs worldwide to make footbed resoling as seamless as buying new, cementing circular sustainability leadership.
+              </p>
+            </div>
+
+            <div class="bg-espresso-900/60 p-5 rounded-xl border border-espresso-700/80">
+              <span class="text-xs font-bold text-cork-400">02. 3D Foot-Scanning App</span>
+              <h4 class="font-serif text-lg font-bold text-white mt-1 mb-2">Digital Sizing Accuracy</h4>
+              <p class="text-xs text-sand-300 leading-relaxed">
+                Implement smartphone LiDAR camera scanning in the mobile app to guide consumers between Regular vs Narrow fit, reducing e-commerce return rates.
+              </p>
+            </div>
+
+            <div class="bg-espresso-900/60 p-5 rounded-xl border border-espresso-700/80">
+              <span class="text-xs font-bold text-cork-400">03. Plant-Based Innovation</span>
+              <h4 class="font-serif text-lg font-bold text-white mt-1 mb-2">Sustainable Materials</h4>
+              <p class="text-xs text-sand-300 leading-relaxed">
+                Accelerate bio-leather alternatives derived from mycelium and cactus to satisfy conscious vegan demographics without compromising natural cork durability.
+              </p>
+            </div>
+
+            <div class="bg-espresso-900/60 p-5 rounded-xl border border-espresso-700/80">
+              <span class="text-xs font-bold text-cork-400">04. Flagship Foot Wellness Hubs</span>
+              <h4 class="font-serif text-lg font-bold text-white mt-1 mb-2">Experiential Retail</h4>
+              <p class="text-xs text-sand-300 leading-relaxed">
+                Transform owned flagships into podiatric wellness experience centers with posture analysis and custom footbed calibration.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Presentation Re-trigger Footer Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-espresso-800 text-xs text-sand-400">
+          <div>
+            <span>Academic Marketing Presentation • Birkenstock 4 Ps & STP Analysis</span>
+          </div>
+          <div class="mt-4 sm:mt-0 flex items-center space-x-4">
+            <button class="launch-presentation-trigger text-cork-300 hover:text-white uppercase tracking-wider font-semibold underline underline-offset-4">
+              Replay in Presentation Mode
+            </button>
+            <a href="#home" class="text-sand-300 hover:text-white uppercase tracking-wider font-semibold">
+              Return to Top ↑
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================== -->
+  <!-- 8. PRESENTATION MODE FLOATING OVERLAY      -->
+  <!-- ========================================== -->
+  <div id="presentation-overlay" class="fixed inset-0 z-50 bg-espresso-900 text-sand-50 hidden flex-col justify-between p-6 sm:p-10 overflow-hidden">
+    
+    <!-- Top Presentation Header -->
+    <div class="flex items-center justify-between border-b border-espresso-800 pb-4">
+      <div class="flex items-center space-x-4">
+        <span class="font-serif text-xl tracking-[0.2em] font-bold text-white">BIRKENSTOCK</span>
+        <span class="text-xs text-cork-400 border-l border-espresso-700 pl-4 hidden sm:inline">Marketing Strategy Presentation</span>
+      </div>
+
+      <!-- Current Slide Indicator -->
+      <div class="flex items-center space-x-3">
+        <div id="pres-slide-counter" class="text-xs font-mono tracking-widest text-sand-300 px-3 py-1 rounded bg-espresso-800 border border-espresso-700">
+          Slide 1 of 7
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="pres-fullscreen-btn" class="p-2 rounded-lg bg-espresso-800 hover:bg-espresso-700 text-sand-200 hover:text-white transition-colors focus:outline-none" title="Toggle Fullscreen (F)">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+          </svg>
+        </button>
+
+        <!-- Exit Presentation Button -->
+        <button id="exit-pres-btn" class="inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-cork-700 hover:bg-cork-600 text-white text-xs font-semibold tracking-wider uppercase transition-colors focus:outline-none" title="Exit Presentation (Esc)">
+          <span>Exit</span>
+          <span>✕</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Center Presentation Slide Body -->
+    <div id="pres-slide-viewport" class="flex-1 my-6 flex items-center justify-center overflow-y-auto px-2">
+      <!-- Injected dynamically via JS based on current slide index -->
+      <div id="pres-slide-content" class="w-full max-w-5xl mx-auto"></div>
+    </div>
+
+    <!-- Bottom Presentation Control Toolbar -->
+    <div class="flex items-center justify-between border-t border-espresso-800 pt-4">
+      
+      <!-- Keyboard Navigation Hints -->
+      <div class="hidden md:flex items-center space-x-2 text-[11px] text-espresso-400">
+        <span>Use</span>
+        <kbd class="px-1.5 py-0.5 rounded bg-espresso-800 text-sand-200 border border-espresso-700 font-mono">←</kbd>
+        <kbd class="px-1.5 py-0.5 rounded bg-espresso-800 text-sand-200 border border-espresso-700 font-mono">→</kbd>
+        <span>keys to navigate slides</span>
+        <span>•</span>
+        <kbd class="px-1.5 py-0.5 rounded bg-espresso-800 text-sand-200 border border-espresso-700 font-mono">Esc</kbd>
+        <span>to exit</span>
+      </div>
+
+      <!-- Slide Navigation Buttons -->
+      <div class="flex items-center space-x-4 ml-auto">
+        <button id="pres-prev-btn" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-espresso-800 hover:bg-espresso-700 text-sand-100 text-xs font-bold uppercase tracking-wider transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+          <span>← Previous</span>
+        </button>
+        <button id="pres-next-btn" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-cork-600 hover:bg-cork-500 text-white text-xs font-bold uppercase tracking-wider transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+          <span>Next →</span>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- 9. TECHNICAL SPECIFICATIONS MODAL          -->
+  <!-- ========================================== -->
+  <div id="product-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-8 relative shadow-2xl border border-sand-300 max-h-[90vh] overflow-y-auto">
+      <button id="close-product-modal" class="absolute top-6 right-6 w-8 h-8 rounded-full bg-sand-100 text-espresso-800 flex items-center justify-center hover:bg-sand-200 transition-colors">
+        ✕
+      </button>
+
+      <div id="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Application Engine -->
+  <script src="app.js"></script>
+</body>
+</html>
