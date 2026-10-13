@@ -1,0 +1,324 @@
+/* ==========================================================================
+   BIRKENSTOCK MARKETING PRESENTATION — LUXURY EDITORIAL STYLESHEET
+   Palette: Warm Beige, Cork Brown, Cream, Rich Espresso Black, Champagne Gold
+   ========================================================================== */
+
+:root {
+  --color-cork-50: #F9F5F0;
+  --color-cork-100: #F2E8DC;
+  --color-cork-200: #E4CFB8;
+  --color-cork-300: #CFA884;
+  --color-cork-400: #BA8454;
+  --color-cork-500: #9C663D;
+  --color-cork-600: #82522C;
+  --color-cork-700: #673E1F;
+  --color-cork-800: #4D2C14;
+  --color-cork-900: #321C0B;
+
+  --color-sand-50: #FBF9F6;
+  --color-sand-100: #F5F0EB;
+  --color-sand-200: #ECE3D8;
+  --color-sand-300: #DFD1C1;
+  --color-sand-400: #CAB59F;
+
+  --color-espresso-900: #14110F;
+  --color-espresso-800: #1E1A17;
+  --color-espresso-700: #2C2622;
+  --color-espresso-600: #403833;
+
+  --color-brass-500: #C5A059;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* Base Smooth Scrolling & Section Offset for Sticky Nav */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem; /* Matches sticky header height */
+}
+
+body {
+  background-color: var(--color-sand-50);
+  color: var(--color-espresso-800);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-sand-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-cork-400);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cork-600);
+}
+
+/* Nav Link Active States */
+.nav-link.active-nav {
+  color: var(--color-cork-700);
+  background-color: var(--color-sand-200);
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-link.active-nav {
+  color: var(--color-cork-800);
+  background-color: var(--color-sand-300);
+  font-weight: 700;
+}
+
+/* Gateway Cards Micro-interactions */
+.gateway-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+.gateway-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Product Cards */
+.product-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Interactive Channel Flow Styles */
+.channel-flow-btn.active-channel {
+  border-color: var(--color-cork-600);
+  background-color: var(--color-cork-100);
+  box-shadow: 0 4px 12px rgba(130, 82, 44, 0.15);
+}
+
+/* STP Tab Styling */
+.stp-tab-btn {
+  position: relative;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.stp-tab-btn.active-tab {
+  color: var(--color-cork-700);
+  border-bottom: 2px solid var(--color-cork-600);
+}
+
+.stp-tab-pane {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Perceptual Map Nodes */
+.map-node {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.map-node:hover {
+  transform: scale(1.12);
+  z-index: 20;
+}
+
+/* Presentation Mode Overlay Transitions */
+#presentation-overlay {
+  animation: presFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes presFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slide-content-anim {
+  animation: slideFadeIn 0.3s ease-out;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Range Slider Styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: var(--color-sand-300);
+  border-radius: 9999px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-cork-600);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Line clamp helper */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Editorial typography and accents */
+.editorial-title {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.editorial-sub {
+  font-family: var(--font-sans);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Interactive badge styling */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Focus and accessibility styles */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-cork-600);
+  outline-offset: 2px;
+}
+
+/* Slide Mapping Drawer transition */
+.slide-map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* World Map Interactive Styles */
+.map-region-path {
+  cursor: pointer;
+  transition: fill 0.25s ease, stroke 0.25s ease, filter 0.25s ease;
+}
+.map-region-path:hover {
+  filter: brightness(1.15) drop-shadow(0 2px 8px rgba(184, 115, 51, 0.4));
+}
+.map-region-path.active-region {
+  stroke: #ffffff;
+  stroke-width: 2px;
+  filter: brightness(1.25) drop-shadow(0 4px 12px rgba(184, 115, 51, 0.6));
+}
+
+.map-label {
+  fill: #fffaf4;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  pointer-events: none;
+}
+
+.world-country {
+  cursor: pointer;
+  stroke: #fffaf4;
+  stroke-width: .6px;
+  transition: filter .2s ease, stroke-width .2s ease;
+}
+.world-country:hover,
+.world-country.active-country {
+  filter: brightness(1.22) drop-shadow(0 2px 5px rgba(64, 40, 24, .35));
+  stroke: #fff;
+  stroke-width: 1.4px;
+}
+
+.map-pin {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.map-pin:hover {
+  transform: scale(1.3);
+}
+
+/* Promotion Section Editorial Background */
+.promotion-hero-bg {
+  background-image: url('assets/images/promotion-spotted-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: scroll;
+}
+@media (min-width: 1024px) {
+  .promotion-hero-bg {
+    background-attachment: fixed;
+  }
+}
+
+/* Interactive Funnel Nodes */
+.funnel-stage-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.funnel-stage-btn:hover {
+  transform: translateY(-2px);
+}
+.funnel-stage-btn.active-stage {
+  box-shadow: 0 8px 24px -4px rgba(184, 115, 51, 0.35);
+}
+
+/* Tactic Card Hover */
+.tactic-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tactic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -6px rgba(44, 30, 22, 0.12);
+}
