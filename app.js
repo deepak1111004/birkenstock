@@ -36,6 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
   }
 
+  // Keep the muted hero film playing when a browser briefly suspends media
+  // during page hydration or tab visibility changes. Do not fight a user's
+  // explicit pause once they have interacted with the control.
+  const heroVideo = document.querySelector('video[aria-label="Birkenstock promotional video"]');
+  if (heroVideo) {
+    let heroWasInteractedWith = false;
+    ['click', 'pointerdown', 'touchstart', 'keydown'].forEach(eventName => {
+      heroVideo.addEventListener(eventName, () => { heroWasInteractedWith = true; }, { once: true });
+    });
+    const resumeHeroVideo = () => {
+      if (!heroWasInteractedWith && document.visibilityState === 'visible' && heroVideo.paused) {
+        heroVideo.play().catch(() => {});
+      }
+    };
+    heroVideo.addEventListener('loadeddata', resumeHeroVideo, { once: true });
+    heroVideo.addEventListener('canplay', resumeHeroVideo, { once: true });
+    heroVideo.addEventListener('pause', () => {
+      if (!heroWasInteractedWith && document.visibilityState === 'visible') {
+        window.setTimeout(resumeHeroVideo, 120);
+      }
+    });
+    document.addEventListener('visibilitychange', resumeHeroVideo);
+  }
+
   /* -------------------------------------------------------------
      1. SCROLL PROGRESS BAR
      ------------------------------------------------------------- */
